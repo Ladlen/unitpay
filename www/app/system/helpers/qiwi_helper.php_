@@ -1,0 +1,157 @@
+<?
+	# QIWI Class
+	class QIWI {
+		# Настройки
+		public $login = '';
+		public $password = '';
+		
+		# Конструктор QIWI
+		public function __construct($login, $password){
+			# Задаём настройки
+			$this->login = intval($login);
+			$this->password = $password;
+		}
+		
+		# Авторизация
+		public function auth(){
+			# Получаем первый токен
+			$a = json_decode($this->request("https://auth.qiwi.com/cas/tgts", json_encode(Array("login" => $this->login, "password" => $this->password)), "POST"), true);
+			# Получаем второй токен
+			$b = json_decode($this->request("https://auth.qiwi.com/cas/sts", json_encode(Array("service" => "https://qiwi.com/j_spring_cas_security_check", "ticket" => $a['entity']['ticket'])), "POST"), true);
+			# Авторизуемся
+			$this->request("https://qiwi.com/j_spring_cas_security_check?ticket=".$b['entity']['ticket'], false, "GET");
+		}
+		
+		# Получение платежей
+		public function getPayments(){
+			# Список платежей
+			$a = $this->request("https://qiwi.com/user/report/list.action?daterange=true&start=".date('d.m.Y', strtotime('-7 day'))."&finish=".date('d.m.Y', strtotime('+1 day')), false, "GET");			
+			# Куки умерли
+			if(preg_match("/pageLogin/", $a)){
+				$this->auth();
+				return $this->getPayments();
+			}
+			# Парсим платежи
+			return $this->parsePayments($a);
+		}
+		
+		# Запрос cURL
+		public function request($url, $data, $type){
+			# Откладка
+			$debug = false;
+			# Настройки cURL
+			$cURL = curl_init();
+			curl_setopt($cURL, CURLOPT_TIMEOUT, 2);
+			curl_setopt($cURL, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 5.1; rv:40.0) Gecko/20100101 Firefox/40.0");
+			curl_setopt($cURL, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($cURL, CURLOPT_FOLLOWLOCATION, 1);
+			curl_setopt($cURL, CURLOPT_HTTPHEADER, ($type == "POST" ? Array('Referer: https://qiwi.com/', 'Origin: https://qiwi.com', 'Host: auth.qiwi.com' ,'Content-Type: application/json', 'Connection: keep-alive', 'Accept-Language: ru;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding: gzip, deflate', 'Accept: application/vnd.qiwi.sso-v1+json') : ""));
+			curl_setopt($cURL, CURLOPT_REFERER, 'https://qiwi.com/');
+			curl_setopt($cURL, CURLOPT_URL, $url);
+			curl_setopt($cURL, CURLOPT_POST, ($type == "POST" ? "1" : "0"));
+			if($data != false) curl_setopt($cURL, CURLOPT_POSTFIELDS, $data);
+			# Сохраним куки
+			curl_setopt($cURL, CURLOPT_COOKIEFILE, '/backup/cookies/'.$this->login.'.txt');
+			curl_setopt($cURL, CURLOPT_COOKIEJAR, '/backup/cookies/'.$this->login.'.txt');
+			if($debug == TRUE) curl_setopt($cURL, CURLOPT_PROXY, $this->ip);
+			# Кругом пустота
+			if(curl_exec($cURL) == ""){
+				# Рекурсия
+				return $this->request($url, $data, $type);
+			}
+			# Все нормуль
+			return curl_exec($cURL);
+		}
+		
+		# Парсинг списка платежей
+		public function parsePayments($data){
+			# Получение списка транзакций
+			$sResult = $data;
+	 
+			$aTransactions = array();
+			
+			foreach( explode( '</div><div class="reportsLine ', str_replace( '> <', '><', preg_replace( '!\s+!u', ' ', $sResult ) ) ) as $iKey => $sValue ) {
+				if( $iKey == 0 )
+					continue;
+				
+				$aData = array();
+				
+				# Получение суммы счета
+				$aData['iID'] = explode( 'class="transaction">', $sValue );
+				if( count( $aData['iID'] ) < 2 )
+					continue;
+				$aData['iID'] = explode( '</', $aData['iID'][1] );
+				$aData['iID'] = trim( $aData['iID'][0] );
+				
+				# Получение даты и время
+				$aData['sDate'] = explode( 'class="date">', $sValue );
+				$aData['sDate'] = explode( '</', $aData['sDate'][1] );
+				$aData['sDate'] = trim( $aData['sDate'][0] );
+				$aData['sTime'] = explode( 'class="time">', $sValue );
+				$aData['sTime'] = explode( '</', $aData['sTime'][1] );
+				$aData['sTime'] = trim( $aData['sTime'][0] );
+				
+				# Получение суммы и валюты счета
+				$aData['sAmount'] = explode( 'class="originalExpense"><span>', $sValue );
+				$aData['sAmount'] = explode( '</', $aData['sAmount'][1] );
+				$aData['sAmount'] = trim( $aData['sAmount'][0] );
+				
+				# Получение суммы счета
+				$aData['dAmount'] = number_format(preg_replace( '/[^0-9\.]+/', '', str_replace( ',', '.', $aData['sAmount'] ) ) - 0, 2, '.', '');
+				
+				# Получение валюты счета
+				$aData['sCurrency'] = mb_strpos( $aData['sAmount'], 'руб.' ) !== false ? 'RUB' : (mb_strpos( $aData['sAmount'], 'долл.' ) !== false ? 'USD' : (mb_strpos( $aData['sAmount'], 'тенге.' ) !== false ? 'KZT' : 'NAN'));
+				
+				# Получение номера телефона корреспондента
+				$aData['iOpponentPhone'] = explode( 'class="opNumber">', $sValue );
+				$aData['iOpponentPhone'] = explode( '</', $aData['iOpponentPhone'][1] );
+				$aData['iOpponentPhone'] = trim( str_replace( '+', '', $aData['iOpponentPhone'][0] ) );
+				
+				# Получение примечания
+				$aData['sComment'] = explode( 'class="comment">', $sValue );
+				$aData['sComment'] = explode( '</', $aData['sComment'][1] );
+				$aData['sComment'] = html_entity_decode( trim( $aData['sComment'][0] ), ENT_QUOTES, 'UTF-8' );
+				
+				# Прибыль или расход ?
+				$aData['sType'] = mb_strpos( $sValue, 'IncomeWithExpend expenditure' ) !== false ? 'EXPENDITURE' : (mb_strpos( $sValue, 'IncomeWithExpend income' ) !== false ? 'INCOME' : 'NAN');
+				
+				# Получение статуса транзакции
+				$aData['sStatus'] = explode( '"', $sValue );
+				$aData['sStatus'] = trim( $aData['sStatus'][0] );
+				
+				# Дополнительные проверки
+				if( $aData['iID'] == false ) {
+					$aData['iID'] = explode( '{"txn":', $sValue );
+					$aData['iID'] = explode( '}', $aData['iID'][1] );
+					$aData['iID'] = $aData['iID'][0];
+				}
+				
+				$aTransactions[] = $aData;
+			}
+			
+			return $aTransactions;
+		}
+		
+		# Поиск платежа
+		public function payment($comment){
+			# Получение списка транзакций
+			$payments = $this->getPayments();			
+			# Ищем платеж
+			foreach($payments as $id => $payment){
+				# Это российский рубль
+				if($payment['sCurrency'] == "RUB"){
+					# Статус операции - проведен
+					if($payment['sStatus'] == "status_SUCCESS"){
+						# Примечание платежа совпала
+						if($payment['sComment'] == $comment){
+							# Платеж найден
+							return true;
+						}
+					}
+				}
+			}
+			# Платеж не найден
+			return false;
+		}
+	}
+?>

@@ -1,0 +1,392 @@
+.modgl:hover {
+	cursor:help;
+}
+.btnbuy {
+	margin-top: -38px;
+margin-left: 367px;
+}
+.hnomarg {
+	margin-top: 0px!important;
+margin: 0 0 9px;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 13px;
+line-height: 18px;
+width: 134px;
+}
+@font-face { font-family: "Rubl Sign"; src: url(http://www.artlebedev.ru/;-)/ruble.eot); }
+
+span.rur { font-family: "Rubl Sign"; text-transform: uppercase; // text-transform: none;}    
+span.rur span { position: absolute; overflow: hidden; width: .45em; height: 1em; margin: .1ex 0 0 -.55em; // display: none; }
+span.rur span:before { content: '\2013'; }
+
+.iconurl {
+	max-width:inherit;
+	max-height:inherit;
+	margin-right:3px;
+}
+.paytable{
+	width:100%;
+}
+
+
+.footcopy {
+	display:block;
+	text-align:center;
+	font-size:11px;
+}
+.foot {
+	margin-top:20px;
+}
+
+input.captcha-shop-input {
+width: 437px;
+text-align: center;
+font-size: 20px;
+color: #5a5a5a;
+padding: 0px 5px;
+margin-top: 45px;
+margin-left: 20px;
+background-color: #ededed;
+border: none;
+display: table;
+height: 45px;
+-moz-appearance: textfield;
+outline: none;
+-webkit-appearance: none;
+}
+
+input.captcha-shop-input::-webkit-inner-spin-button { 
+  display: none;
+}
+
+.buy_game {
+background: #EDA72F;
+border-bottom: 1px solid #EDA72F;
+font-size: 22px;
+padding: 7px 0px;
+border-right: none;
+border-left: none;
+border-top: none;
+width: 437px;
+color: #fff;
+border-radius: 7px;
+margin-left: 20px; 
+}
+
+.agreement a {
+color: #424242;
+border-bottom: 1px dotted #424242;  
+}
+
+.popup {
+top: 0;
+right: 0;
+left: 0;
+font-size: 14px;
+z-index: 100001;
+display: block;
+visibility: hidden;
+margin: 0 auto;
+width: 90%;
+min-width: 320px;
+max-width: 600px;
+
+position: fixed;
+border: 1px solid #383838;
+
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+border-radius: 4px;
+background-color: #FFFFFF;
+
+-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+-o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+
+opacity: 0;
+
+-webkit-transition: all ease .5s;
+-moz-transition: all ease .5s;
+-ms-transition: all ease .5s;
+-o-transition: all ease .5s;
+transition: all ease .5s;
+}
+.overlay:target+.popup {
+top: 20%;
+visibility: visible;
+opacity: 1;
+}
+
+.close {
+position: absolute;
+top: -10px;
+right: -10px;padding: 0;
+width: 20px;
+height: 20px;
+border: 2px solid #ccc;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+-ms-border-radius: 15px;
+-o-border-radius: 15px;
+border-radius: 15px;
+background-color: rgba(61, 61, 61, 0.8);
+-webkit-box-shadow: 0px 0px 10px #000;
+-moz-box-shadow: 0px 0px 10px #000;
+box-shadow: 0px 0px 10px #000;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+line-height: 20px;
+-webkit-transition: all ease .8s;
+-moz-transition: all ease .8s;
+-ms-transition: all ease .8s;
+-o-transition: all ease .8s;
+transition: all ease .8s;
+}
+.close:before {
+color: rgba(255, 255, 255, 0.9);
+content: "X";
+text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+font-size: 12px;
+}
+.close:hover {
+background-color: rgba(252, 20, 0, 0.8);
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);    
+}
+.popup p, .popup div {
+margin-bottom: 20px;
+}
+
+.title_modal {
+background: #108ade;
+color: white;
+font-size: 22px;
+padding: 10px;
+text-align: center;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.overlay {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 100000;
+visibility: hidden;
+
+background-color: rgba(0, 0, 0, 0.7);
+opacity: 0;
+position: fixed; 
+cursor: default; 
+-webkit-transition: opacity .5s;
+-moz-transition: opacity .5s;
+-ms-transition: opacity .5s;
+-o-transition: opacity .5s;
+transition: opacity .5s;
+}
+.overlay:target {
+visibility: visible;
+opacity: 1;
+}
+.is-image {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display:block;
+margin: auto;
+width: 100%;
+height: auto;
+
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+border-radius: 4px;
+}
+
+embed, iframe {
+top: 0;
+right: 0;
+bottom: 0; 
+left: 0; 
+display:block;
+margin: auto;
+max-width: 600px;
+width: 100%;
+}
+
+.select_pay {
+text-align: center;
+}
+
+.agreement {
+font-family: PFDinDisplayPro-Bold;
+font-size: 13px;
+padding: 5px 20px;
+}
+
+
+div.container { 
+margin: auto; 
+width: 90%; 
+margin-bottom: 10px;
+}
+ 
+ul.tabNavigation {
+list-style: none;
+margin-left: 20px;
+padding: 0;
+}
+ 
+ul.tabNavigation li {
+display: inline;
+}
+ 
+ul.tabNavigation li a {
+padding: 15px 18px;
+color: #000;
+text-decoration: none;
+}
+ 
+ul.tabNavigation li a.selected,
+ul.tabNavigation li a.selected:hover {
+background: rgba(177, 182, 184, 0.24);
+color: #000;
+border-radius: 4px;
+}
+ 
+ul.tabNavigation li a:hover {
+background: rgba(177, 182, 184, 0.24);
+color: #000;
+border-radius: 4px;
+-webkit-transition: all ease .9s;
+-moz-transition: all ease .9s;
+-ms-transition: all ease .9s;
+-o-transition: all ease .9s;
+transition: all ease .9s;    
+}
+ 
+ul.tabNavigation li a:focus {
+outline: 0;
+}
+ 
+div.tabs div {
+
+}
+ 
+div.tabs div h2 {
+margin-top: 0;
+}
+
+.ask_block_text {
+color: #108ade;
+font-size: 19px;}
+
+
+#sharebutton {
+background: #5B7FA6;
+color: #fff;
+border-bottom: 2px solid #2B587A;
+padding: 6px 30px;
+font-size: 18px;
+}
+
+#confirmbutton {
+color: rgb(255, 255, 255);
+padding: 6px 30px;
+font-size: 18px;
+float: right;
+}
+
+.gift_enter {
+color: rgb(255, 255, 255);
+padding: 6px 30px;
+font-size: 18px;
+float: right;
+margin-top: -39px;
+}
+
+
+#countdown {
+background-color: rgba(16, 138, 222, 0.77);
+color: #fff;
+padding: 3px 5px;
+border-radius: 3px;
+}
+
+.avavk {
+background: url('https://vk.com/images/camera_50.gif');
+height: 50px;
+width: 50px;
+}
+
+.old_price {
+text-decoration: line-through;
+background: rgba(140, 133, 133, 0.11);
+color: #999797;
+padding: 0 8px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-ms-border-radius: 2px;
+-o-border-radius: 2px;
+border-radius: 2px;
+cursor: default;
+margin-top: -45px;
+float: right;
+font-size: 13px;
+}
+
+.old_price1 {
+background: #FFF;
+padding: 6px;
+color: #000;
+margin-left: -8px;
+text-decoration: line-through;
+}
+
+
+.agreement1 {
+width: 437px;
+margin-left: 20px;
+}
+
+.prom {
+font-family: tahoma;
+font-size: 12px;
+color: #424242;
+float: right;
+padding-bottom: 3px;
+}
+
+.bp1 {
+    color: rgb(16, 138, 222);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.bp2 {
+color: rgba(255, 255, 255, 0.59);
+    font-size: 8.7px;
+    margin-top: -3px;
+    font-family: 'Open Sans',sans-serif;
+    padding-bottom: 3px;
+}
+
+.bptext {
+    color: #fff;
+    font-size: 13px;
+}
+
+.butorder {
+    padding-left: 30px !important;
+    background: url('/assets/Paradox/img/sprite.png') 0 -174px no-repeat;
+}

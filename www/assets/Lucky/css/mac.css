@@ -1,0 +1,2571 @@
+.special {
+	background: rgba(18, 54, 47, 0.5);
+}
+
+
+#fssPrev{font-size: 0;z-index:1;position:absolute;background:url("/image/sliderRarrs.png") no-repeat left top;height:45px;width:14px;top:45%;left:20px;cursor:pointer;}
+#fssNext{font-size: 0;z-index:1;position:absolute;right:20px;background:url("/image/sliderRarrs.png") no-repeat right top;height:45px;width:14px;top:45%;left:auto;cursor:pointer;}
+
+
+.color3_bg {
+    background-color: #3E445D;
+}
+
+
+/* Sliders */
+.sliders {margin:0px 0;overflow:hidden;}
+.bigSlider,.miniSlider {height: 300px;padding:0px;background:#f9f9f9;border:1px solid #c6c6c6;border-radius:2px;position:relative;}
+.bigSlider p,.miniSlider p {text-indent:10px;text-overflow:ellipsis;color:#fff;position:absolute;background:rgb(0,0,0);background:rgba(0,0,0,0.7);padding:4px 0;height:25px;width:100%;overflow:hidden;}
+.bigSlider p a,.miniSlider p a {color:#fff;}
+.bigSlider li, .miniSlider li {position:relative;height: 300px;;overflow:hidden}
+.bigSlider li {width:785px;} .miniSlider li {width:293px;}
+
+.bigSlider {float:left;width:785px;}
+.bigSlider .slides {height:300px;width:785px;overflow:hidden;}
+.bigSlider img {max-width:785px;}
+.bigSlider p {bottom:-30px;white-space: nowrap;transition:all 0.5s linear;}
+
+.bigSlider:hover li p {bottom:0;}
+.bigSlider .next, .bigSlider .prev {text-indent:-999px;z-index:999;position:absolute;background:url("/image/sliderRarrs.png") no-repeat left top;height:45px;width:14px;top:45%;left:20px;cursor:pointer;}
+.bigSlider .next {right:20px;left:auto;background-position:right top;}
+
+.miniSlider {float:right;width:293px;}
+.miniSlider p {bottom:0;}
+.minislides {height:160px;overflow:hidden;}
+.minislides img {max-width:293px;}
+    
+
+.benefits {
+	padding-top: 20px;
+    float: left;
+    margin-left: 23px;
+}
+.benefits .delivery-icon {
+    background: url(/img/delivery-icon.png) no-repeat left center;
+}
+.benefits .best-prices-icon {
+    background: url(/img/best-prices-icon.png) no-repeat left center;
+}
+.benefits .convenient-payment-methods {
+    background: url(/img/convenient-payment-methods.png) no-repeat left center;
+}
+.benefits li {
+    float: left;
+    font-size: 9px;
+    line-height: 19px;
+    text-transform: uppercase;
+    padding: 10px 10px 10px 25px;
+    margin-left: 5px;
+    color: #333333;
+    letter-spacing: 0.5px;
+    list-style: none;
+}
+
+.search-wr__loadout-wr._active {
+    display: block;
+    -webkit-animation-name: flipFromTop;
+    animation-name: flipFromTop;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.search-wr__loadout {
+    padding: 10px 0;
+}
+
+.search-prod {
+    padding: 5px 20px;
+    display: block;
+    -webkit-transition: 150ms;
+    transition: 150ms;
+    color: inherit;
+}
+
+.search-prod {
+    white-space: nowrap;
+}
+
+.search-prod__img-wr {
+    width: 50px;
+    margin-right: -50px;
+}
+
+.search-prod__img-wr, .search-prod__main {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.search-prod__img {
+    padding-bottom: 144%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.search-wr__loadout-wr {
+    position: absolute;
+    z-index: 5;
+    left: -5px;
+    right: 0;
+    overflow: auto;
+    margin-top: 8px;
+    box-shadow: 3.5px 6.06px 32px 0 rgba(55,54,55,.24);
+    background-color: #fff;
+}
+
+.search-prod__main {
+    padding: 2px 0 0 59px;
+    width: 100%;
+}
+
+.search-wr__loadout-bot {
+    background: #212121;
+    color: #fff;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.search-prod__genre {
+    text-transform: uppercase;
+    color: #939393;
+    font-size: 12px;
+}
+
+.search-prod__genre SPAN {
+    color: #feb300;
+}
+
+span.price--ssm {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.search-prod:hover {
+    background-color: #f6f6f6;
+}
+
+.search-wr__loadout-bot-link:hover {
+    text-decoration: underline;
+}
+
+.footers{
+	background: #0E0E0E;
+	color: #606060;
+	padding-left: 32px;
+	padding-top: 15px;
+	font-size: 12px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.macpay-topmenu a,
+#macpay-category a,
+.macpay-main a,
+.macpay-snapshot a,
+.macpay-category-blocks a {
+	cursor: pointer;
+}
+
+.macpay-loader {
+	display: block;
+	text-align: center;
+	position: fixed;
+	z-index: 10001;
+	background: #EBEBEB;
+	color: #373737;
+	padding: 16px 20px;
+	font-size: 20px;
+	border-radius: 5px;
+	text-shadow: 1px 1px 1px #fff;
+	left: 50%;
+	top: -25px;
+	width: 200px;
+	margin: 20px 20px 20px -100px;
+	-moz-box-shadow: 0 0 3px #666;
+	-webkit-box-shadow: 0 0 3px #666;
+	box-shadow: 0 0 3px #666;
+	font-family: tahoma, Arial;
+}
+
+h1 {
+	color: #565656;
+	display: block;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.1em;
+	margin: 10px 0!important;
+	text-decoration: none
+}
+
+.macpay-category {
+	float: left;
+	clear: both;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	width: 19%;
+	font-family: tahoma, Arial;
+}
+
+.macpay-main {
+	float: right;
+	width: 77%
+}
+
+.macpay-main,
+.macpay-main * {
+	font-family: Tahoma, Arial
+}
+
+.macpay-main-nocategory {
+	width: 100%
+}
+
+.macpay-main-nocategory,
+.macpay-main-nocategory * {
+	font-family: Tahoma, Arial;
+	text-align: left;
+}
+
+.macpay-breadcrumbs {
+	color: #7B7B7B;
+	font-size: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+	font-family: tahoma, Arial;
+}
+
+.macpay-breadcrumbs a {
+	color: #0B6678;
+	font-size: 13px;
+	text-decoration: none;
+	font-family: tahoma, Arial;
+	cursor: pointer;
+}
+
+.macpay-category ul a {
+	color: #0b6678;
+	font-size: 13px;
+	line-height: 23px;
+	text-decoration: none
+}
+
+.macpay-pager-pages li {
+	display: block;
+	float: left
+}
+
+.macpay-pager-pages .macpay-page-choosed {
+	font-weight: 700;
+	text-decoration: none
+}
+
+.macpay-article-img {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	margin-top: 5px;
+	margin-right: 7px
+}
+
+.macpay-article-img a {
+	color: #0B6678
+}
+
+.macpay-article-imgs li {
+	float: left;
+	list-style: none;
+	padding: 5px;
+	text-align: center;
+	width: 150px
+}
+
+.macpay-article-video a {
+	background-color: #FFF;
+	border: 1px solid #B5B59D;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	padding: 5px;
+	position: relative
+}
+
+.macpay-article-video a span {
+	background: url(http://plati.ru/images/ico-play-video.png) no-repeat scroll center center transparent;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+
+.macpay-article-video a:hover span {
+	background: url(http://plati.ru/images/ico-play-video-hover.png) no-repeat scroll center center transparent
+}
+
+.macpay-comments-tabs {
+	border-bottom: 1px solid #8AD;
+	height: 31px;
+	list-style: none;
+	width: 100%
+}
+
+.macpay-comments-tabs li {
+	background-color: #fff;
+	border: 1px solid #8AD;
+	float: left;
+	line-height: 30px;
+	list-style: none;
+	margin: 0 5px 0 0;
+	padding: 0 15px;
+	text-align: center
+}
+
+li.macpay-comments-choosed {
+	background-color: #fff;
+	border-bottom: 1px solid #fff
+}
+
+.macpay-article-imgs ul {
+	list-style: none;
+	width: 500px
+}
+
+.macpay-logo {
+	display: inline-block;
+	float: left;
+	font-family: tahoma, arial
+}
+
+.macpay-logo a {
+	cursor: pointer;
+}
+
+.macpay-topmenu {
+	font-size: 0;
+	float: right;
+	margin-top: 8px;
+	text-align: right;
+	display: inline-block;
+	font-family: tahoma, arial
+}
+
+#macpay-search {
+	float: right;
+	margin-top: 7px;
+	padding: 0 0 0 5px;
+	z-index: 100;
+	display: inline-block;
+	font-family: tahoma, arial
+}
+
+.macpay-nothing-found {
+	color: #373737;
+	margin: 15px 0;
+	display: block
+}
+
+.macpay-topmenu a {
+	display: inline-block;
+	color: #565656;
+	padding-right: 10px;
+	font-size: 16px;
+	border-right: 1px solid #ccc;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+.macpay-topmenu a:last-child {
+	border: 0 none!important
+}
+
+.macpay-topmenu a:hover {
+	text-decoration: underline;
+}
+
+#macpay-search input[type="text"] {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #373737;
+	font-family: Tahoma, Arial;
+	height: 24px;
+	padding-left: 5px;
+	width: 200px;
+	margin-right: 3px;
+	margin-left: 10px;
+	display: inline-block
+}
+
+.macpay-search-go {
+	background: url(//www.macpay.ru/shop/img/loupe.png) center center no-repeat #0b6678!important;
+	height: 28px;
+	width: 29px;
+	padding: 0 10px;
+	vertical-align: bottom;
+	cursor: pointer;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	border: 0 none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	right: 0;
+	top: 0;
+	transition: All .4s ease;
+	-webkit-transition: All .4s ease;
+	-moz-transition: All .4s ease;
+	-o-transition: All .4s ease
+}
+
+.macpay-search-go:hover {
+	background: url(//www.macpay.ru/shop/img/loupe.png) center center no-repeat #0a91c0!important;
+}
+
+.macpay-articles {
+	list-style-type: none
+}
+
+.macpay-product {
+	border-bottom: dashed 1px #ccc;
+	display: inline-block;
+	margin: 3px 0;
+	position: relative;
+	width: 100%
+}
+
+.macpay-product span.macpay-currency {
+	color: #d90000;
+	display: block;
+	font-size: 12px;
+	height: 12px;
+	line-height: 1em;
+	min-width: 100px;
+	position: absolute;
+	right: 15px;
+	text-align: right;
+	top: 35px
+}
+
+.macpay-product img {
+	-moz-transition: All .2s ease;
+	-o-transition: All .2s ease;
+	-webkit-transition: All .2s ease;
+	margin: 5px 5px 12px;
+	padding: 5px
+}
+
+.macpay-product:hover img {
+	-moz-box-shadow: 2px 2px 3px #9a9a9a;
+	-webkit-box-shadow: 2px 2px 3px #9a9a9a;
+	box-shadow: 2px 2px 3px #9a9a9a
+}
+
+.macpay-separator {
+	width: 15px
+}
+
+.macpay-left {
+	float: left
+}
+
+.macpay-article-name {
+	color: #333;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.1em;
+	margin-right: 20px;
+	padding-top: 7px;
+	text-decoration: none
+}
+
+.macpay-article-cost {
+	color: #d90000;
+	display: block;
+	float: right;
+	font-size: 24px;
+	margin-right: 15px;
+	padding-top: 9px;
+	white-space: nowrap
+}
+
+.macpay-options {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #ebebeb;
+	border-radius: 3px;
+	border-radius: 3px;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	display: inline-block;
+	width: 100%
+}
+
+.macpay-sortby {
+	padding-left: 10px;
+	display: inline-block;
+	padding-top: 6px;
+	vertical-align: middle;
+	font-size: 14px
+}
+
+.macpay-sortby span {
+	color: #373737;
+	font-family: Tahoma;
+	font-size: 14px;
+	line-height: 27px
+}
+
+#macpay-currency {
+	display: inline-block;
+	float: right;
+	line-height: 27px;
+	margin-right: 10px;
+	padding: 5px 5px 5px 0
+}
+
+#macpay-currency span {
+	color: #373737;
+	font-family: Tahoma;
+	line-height: 27px
+}
+
+#macpay-sort {
+	display: inline-block;
+	float: left;
+	padding: 5px 5px 5px 10px
+}
+
+#macpay-sort span,
+#macpay-sort a {
+	color: #0B6678;
+	font-family: Tahoma;
+	font-size: 13px;
+	line-height: 27px
+}
+
+#macpay-sort span {
+	color: #373737
+}
+
+.macpay-category-blocks div {
+	padding: 10px;
+	text-align: center;
+	border-radius: 3px 3px 3px 3px;
+	display: inline-block;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	position: relative;
+	transition: all 0.5s ease 0s;
+	vertical-align: top;
+}
+
+.macpay-category-blocks a {
+	text-decoration: none;
+	color: #0B6678;
+}
+
+.macpay-category-blocks a:hover {
+	text-decoration: underline;
+}
+
+.macpay-category-blocks div a {
+	display: block;
+	font-size: 16px;
+	line-height: 1.2em;
+	padding: 7px 0;
+	text-decoration: none;
+	text-align: center;
+}
+
+.macpay-category-blocks div a:hover + a {
+	text-decoration: underline
+}
+
+.macpay-category-blocks div a span {
+	font-size: normal;
+	color: #708787;
+	font-size: 11px;
+}
+
+div.macpay-category a {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1em;
+	padding: 7px 0;
+	text-decoration: none
+}
+
+.macpay-homepage {
+	display: inline-block;
+	clear: left;
+	width: 100%;
+}
+
+.macpay-snapshot {
+	display: inline-block;
+	vertical-align: top;
+	border: 0px solid #ABABAB;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	position: relative;
+	text-align: left;
+	height: 145px;
+  width: 250px;
+  background: #F3F3F3;
+}
+
+.macpay-snapshot: hover {
+	display: inline-block;
+	vertical-align: top;
+	border: 0px solid #ABABAB;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	position: relative;
+	text-align: left;
+	height: 145px;
+  width: 250px;
+	box-shadow: 2px 2px 5px rgb(123, 123, 123);
+	color: #0884bb;
+}
+
+.random-products {
+	display: inline-block;
+	vertical-align: top;
+	border: 2px solid #dfdfdf;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	position: relative;
+	text-align: left;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+	width: 190.2px;
+}
+
+.random-products div:nth-child(2) {
+	text-align: center;
+	margin-top: 2px;
+	font-size: 0;
+}
+
+.random-products > div {
+	width: 100%;
+	display: block
+}
+
+.macpay-snapshot > div {
+	width: 100%;
+	display: block
+}
+
+.macpay-snapprodnamehldr {
+	display: inline-block;
+	padding-bottom: 0px;
+	    height: 125px;
+}
+
+.random-productsprodnamehldr {
+	display: inline-block;
+	padding-bottom: 4px;
+}
+
+.macpay-snapimgalign a {
+	display: block;
+}
+
+.leftbut {
+	width: 210px;
+	height: 32px;
+	display: inline-block;
+	color: #0E0E0E;
+	font-size: 16px;
+	font-weight: 500;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0px solid #F3F3F3;
+	background: #F3F3F3;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	margin-right: 0px;
+	padding-left: 25px;
+	font-size: 15px;
+    font-weight: bold;
+}
+
+.leftbut:hover {
+	width: 210px;
+	height: 32px;
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0px solid #2AACFF;
+	background: #3E445D;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	margin-right: 0px;
+	padding-left: 25px;
+	font-size: 15px;
+    font-weight: bold;
+	border-radius: 3px;
+}
+
+.macpay-snapimgalign {
+	text-align: center
+}
+
+.macpay-productList.macpay-homepage {
+	margin-top: 10px!important
+}
+
+.macpay-snapshot:hover {
+	border: 0px solid #ABABAB;
+	color: #0884BB;
+}
+
+.macpay-snapshot .item-center {
+	padding-bottom: 10px;
+	min-height: 20px;
+	background: #3E445D;
+    color: #FFFFFF;
+	font-size: 12px;
+	padding-top: 2px;
+	transition: .3s;
+}
+
+.macpay-snapshot {
+	transition:.3s;
+	-webkit-transition: .3s;
+}
+
+
+.macpay-snapshot:hover .item-center {
+	color: #FFFFFF;
+  background: #0884BB;
+	z-index: -9999;
+}
+
+.macpay-snapshot:hover .snappricer {
+	padding: 5px 30%;
+}
+
+.macpay-snapshot:hover .img-item{
+	opacity: 0.7;
+	width: 100%;
+	margin: auto 0;
+	-webkit-transition: top 1s ease-out 0.5s;
+     -moz-transition: top 1s ease-out 0.5s;
+     -o-transition: top 1s ease-out 0.5s;
+     transition: top 1s ease-out 0.5s;
+	z-index: -9999;
+}
+
+.img-item{
+	width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+	z-index: 0;
+}
+
+.snappricer {
+	background: #0884BB;
+	font-family: Verdana;
+	font-size: 13px;
+	-moz-border-radius: 5px 0 5px 0;
+	-khtml-border-radius: 5px 0 5px 0;
+	color: #fff;
+	padding: 5px;
+	border-radius: 0 0 5px 5px;
+	-webkit-transition: .3s .1s;
+	transition: .3s .1s;
+}
+
+.pre-snapprice {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	padding: 0 5px;
+	line-height: 26px;
+}
+
+.pinfo {
+	width: 100%;
+	padding: 10px;
+}
+
+.randompricer {
+	background: #0884BB;
+	font-family: Verdana;
+	font-size: 12px;
+	color: #fff;
+	padding: 4px;
+	padding-left: 1px;
+	-moz-border-radius: 5px 0 5px 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-khtml-border-radius: 5px 0 0 0;
+	border-radius: 6px 0 0 0;
+	position: absolute;
+	bottom: 6px;
+	right: 0;
+}
+
+.kontakts {
+	width: 210px;
+	height: 32px;
+	display: inline-block;
+	color: #0E0E0E;
+	font-size: 16px;
+	font-weight: 500;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #F3F3F3;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 10px;
+	margin-right: 0px;
+	padding-left: 25px;
+	font-size: 15px;
+    font-weight: bold;
+}
+
+.kontakts:hover {
+	width: 210px;
+	height: 32px;
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #3E445D;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 10px;
+	margin-right: 0px;
+	padding-left: 25px;
+	font-size: 15px;
+    font-weight: bold;
+	border-radius: 3px;
+}
+
+.macpay-snapshot span.macpay-snapname {
+	color: #656565;
+	display: block;
+	min-width: 130px;
+	font-family: Tahoma, Arial;
+	font-size: 14px;
+	height: 38px;
+	line-height: 1.3em;
+	overflow: hidden;
+	padding: 5px 5px 0 10px;
+	text-align: left
+}
+
+.random-products span.random-snapprice {
+	color: #D90000;
+	display: block;
+	float: right;
+	font-size: 18px;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 15px;
+	text-align: right
+}
+
+.macpay-snapshot span.macpay-snapprice {
+	color: #D90000;
+	display: block;
+	float: right;
+	font-size: 18px;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 15px;
+	text-align: right
+}
+
+.macpay-snapshot span.macpay-snapcurrency {
+	background: #fde747;
+	font-family: Verdana;
+	font-size: 12px;
+	color: #000;
+	padding: 5px;
+	-moz-border-radius: 5px 0 5px 0;
+	-webkit-border-radius: 5px 0 5px 0;
+	-khtml-border-radius: 5px 0 5px 0;
+	border-radius: 5px 0 5px 0;
+	position: absolute;
+	bottom: 43px;
+	right: 0;
+}
+
+.macpay-snapshot img {
+	border: 0 none;
+	padding: 0;
+}
+
+a.macpay-buyButton {
+	-webkit-transition: All .2s ease;
+	-moz-transition: All .4s ease;
+	-o-transition: All .4s ease;
+	padding: 10px 15px;
+	display: block;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #0884BB;
+	font-size: 14px;
+	cursor: pointer;
+	line-height: 1.3em;
+	border: 0 none;
+	color: #fff;
+	font-family: Tahoma, Arial;
+	border: 1px solid rgb(8, 132, 187);
+}
+
+a.macpay-buyButton-empty {
+	-webkit-transition: All .4s ease;
+	-moz-transition: All .4s ease;
+	-o-transition: All .4s ease;
+	padding: 5px 7px;
+	display: block;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #ccc;
+	font-size: 14px;
+	cursor: pointer;
+	border: 0 none;
+	line-height: 1.3em;
+	color: #fff;
+	border: 1px solid rgb(34, 34, 34);
+}
+
+a.macpay-buyButton:hover {
+	text-decoration: none;
+	border: 1px solid #3199C7;
+	background: #1EB1D6;
+}
+
+a.macpay-buyButton-empty:hover {
+	cursor: default
+}
+
+.macpay-snapshot a.macpay-buyButton {
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: 10px
+}
+
+.macpay-snapshot a.macpay-buyButton-empty {
+	margin-left: 10px;
+	display: inline-block;
+	margin-bottom: 10px
+}
+
+.macpay-product a.macpay-buyButton {
+	position: absolute;
+	right: 15px;
+	bottom: 10px
+}
+
+.macpay-product a.macpay-buyButton-empty {
+	position: absolute;
+	right: 15px;
+	bottom: 10px
+}
+
+.macpay-product-right a.macpay-buyButton {
+	clear: both;
+	float: right;
+	margin-top: 10px
+}
+
+.macpay-product-right a.macpay-buyButton-empty {
+	clear: both;
+	float: right;
+	margin-top: 10px
+}
+
+.macpay-snapshot div {
+	display: block;
+}
+
+.macpay-snapshot .macpay-vitrinaicon {
+	color: #FFF;
+	display: block;
+	font-size: 9px;
+	line-height: 16px;
+	margin-left: 10px;
+	text-align: left;
+	clear: both
+}
+
+.macpay-vitrinaicon.macpay-action {
+	background: #4caf31;
+	color: #FFF;
+	float: right;
+	font-size: 10px;
+	margin-right: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left
+}
+
+.macpay-vitrinaicon.macpay-newproduct {
+	background: #f8885b;
+	color: #FFF;
+	float: right;
+	font-size: 10px;
+	margin-right: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left
+}
+
+.macpay-vitrinaicon.macpay-lider {
+	background: #ff6681;
+	color: #FFF;
+	float: right;
+	font-size: 10px;
+	margin-right: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left
+}
+
+.macpay-productDescription {
+	color: #6F6F6F;
+	font-family: Tahoma, Arial;
+	font-size: 14px;
+	font-weight: 400;
+	padding-top: 12px
+}
+
+.macpay-prod-name {
+	color: #565656;
+	font-size: 24px;
+	line-height: 1.1em;
+	margin: 10px 0;
+	text-decoration: none
+}
+
+.macpay-prod-cost {
+	clear: both;
+	color: #d90000;
+	display: block;
+	float: right;
+	font-size: 24px;
+	width: 100%;
+	text-align: right;
+	padding-bottom: 15px;
+	white-space: nowrap;
+	margin-bottom: 10px;
+}
+
+div.macpay-productBuy {
+	color: #373737;
+	font-family: Arial;
+	font-weight: 400;
+	line-height: 1.4em;
+	padding-top: 4px;
+	float: right
+}
+
+.macpay-pricelabel {
+	display: block;
+	float: right
+}
+
+.macpay-labelIcon {
+	display: block;
+	height: 23px;
+	position: absolute;
+	right: 0;
+	top: 60px;
+	width: 120px
+}
+
+.macpay-browseProdTitle p {
+	color: #6f6f6f;
+	font-size: 14px;
+	font-weight: 400;
+	padding-top: 10px
+}
+
+.macpay-browseProdTitle a {
+	color: #565656;
+	display: block;
+	margin-left: 178px;
+	font-size: 24px;
+	line-height: 1.1em;
+	margin: 10px 100px 10px 0;
+	text-decoration: none
+}
+
+.macpay-product-details {
+	font-size: 14px;
+	margin-top: 10px;
+	position: relative
+}
+
+#macpay-popup-main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 9999;
+}
+
+#macpay-popup-fade {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	zoom: 1;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+}
+
+#macpay-popup-loader {
+	margin: 0px auto 0px auto;
+	top: 30%;
+	position: relative;
+	background: #fff url(//events.webmoney.ru/images/loading2.gif) center center no-repeat;
+	width: 100px;
+	height: 50px;
+}
+
+#macpay-popup-container {
+	position: relative;
+	margin: 0px auto;
+	padding: 35px 25px 10px 25px;
+	background: white;
+}
+
+#macpay-popup-close {
+	font-size: 0;
+	width: 24px;
+	display: block;
+	z-index: 99;
+	position: absolute;
+	height: 24px;
+	top: 5px;
+	right: 5px;
+	background: url(http://macpay.ru/shop/img/popup_close.png) center no-repeat;
+}
+
+#macpay-popup-container a#macpay-popup-left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 40%;
+	background: url(//www.macpay.ru/shop/img/popup_left.png) left center no-repeat;
+}
+
+#macpay-popup-container a#macpay-popup-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 40%;
+	background: url(//www.macpay.ru/shop/img/popup_right.png) right center no-repeat;
+}
+
+div.macpay-popup-video + br + div.macpay-calc-center a#macpay-popup-left {
+	width: 48px!important;
+}
+
+div.macpay-popup-video + br + div.macpay-calc-center a#macpay-popup-right {
+	width: 48px!important;
+}
+
+#macpay-popup-container a {
+	cursor: pointer;
+}
+
+#macpay-popup-img {
+	font-size: 14px;
+	font-family: Thaoma, Verdana;
+	color: #373737!;
+	margin-bottom: -30px;
+	margin-top: -20px;
+}
+
+#macpay-popup-img img {
+	padding-top: 25px;
+}
+
+#macpay-agree {
+	-webkit-transition: All .4s ease;
+	-moz-transition: All .4s ease;
+	-o-transition: All .4s ease;
+	padding: 5px 7px;
+	display: inline-block;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #0b6678;
+	font-size: 14px;
+	cursor: pointer;
+	line-height: 1.3em;
+	border: 0 none;
+	color: #fff;
+	font-family: Tahoma, Arial
+}
+
+#macpay-agree:hover {
+	-webkit-transition: All .4s ease;
+	-moz-transition: All .4s ease;
+	-o-transition: All .4s ease;
+	padding: 5px 7px;
+	display: inline-block;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #0b6678;
+	font-size: 14px;
+	cursor: pointer;
+	line-height: 1.3em;
+	border: 0 none;
+	color: #fff;
+	font-family: Tahoma, Arial;
+	background: #0a91c0
+}
+
+#macpay-disagree {
+	-webkit-transition: All .4s ease;
+	-moz-transition: All .4s ease;
+	-o-transition: All .4s ease;
+	padding: 5px 7px;
+	display: inline-block;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #ccc;
+	font-size: 14px;
+	cursor: pointer;
+	border: 0 none;
+	line-height: 1.3em;
+	color: #fff
+}
+
+.macpay-browseProdTitle a.macpay-product-details {
+	color: #0B6678;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	width: 130px;
+	margin-top: 10px;
+	text-decoration: none;
+	cursor: pointer
+}
+
+.macpay-browseProdTitle a.macpay-product-details:hover {
+	text-decoration: underline
+}
+
+.macpay-product-left {
+	text-align: center;
+	float: left
+}
+
+.macpay-product-left a {
+	font-size: 0;
+	text-decoration: none
+}
+
+.macpay-product-right {
+	padding-right: 10px
+}
+
+.macpay-prod-info {
+	clear: both;
+	color: #373737;
+	float: right;
+	margin-right: -10px;
+	padding-top: 20px;
+}
+
+.macpay-description_content .macpay-prod-info {
+	float: none;
+	clear: none;
+	margin-right: 4px
+}
+
+.macpay-prod-info h3 {
+	border-bottom: 1px dashed #CCC;
+	color: #373737;
+	margin-bottom: 8px;
+	padding-bottom: 3px
+}
+
+.macpay-product-details {
+	display: table;
+	width: 100%
+}
+
+.macpay-product-left {
+	display: table-cell;
+	vertical-align: top
+}
+
+.macpay-product-right {
+	display: table-cell;
+	vertical-align: top;
+	width: 99%;
+	padding-left: 10px
+}
+
+.macpay-discounttable1 {
+	margin-top: 20px;
+	color: #373737;
+	border: 1px solid #ccc;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px
+}
+
+.macpay-discounttable1 td {
+	padding: 2px 7px;
+	vertical-align: middle
+}
+
+.macpay-discounttable1 tr td:nth-child(2) {
+	text-align: center
+}
+
+.macpay-discounttable1 tr td:last-child {
+	text-align: right
+}
+
+.macpay-discounttable1 tr:nth-child(2n) {
+	background: #f2f2f2
+}
+
+.macpay-discounttable1 .macpay-discounttabbe-head td {
+	font-weight: bold;
+	padding: 6px 7px
+}
+
+.macpay-discounttable2 ul {
+	list-style-type: none;
+	margin-top: 7px;
+	color: #373737;
+	padding-left: 0
+}
+
+.macpay-discounttable2 td {
+	padding: 2px 7px;
+	vertical-align: middle
+}
+
+.macpay-discounttable2 span {
+	display: block;
+	font-weight: bold;
+	margin-top: 15px;
+	color: #373737
+}
+
+.macpay-prodinfoseparator {
+	height: 10px
+}
+
+.macpay-productdetails-tabs {
+	margin-top: 30px
+}
+
+div.macpay-productpage div.macpay-options {
+	margin-top: 10px;
+}
+
+.macpay-productdetails-tabs a {
+	-moz-border-radius-bottomleft: 0;
+	-moz-border-radius-bottomright: 0;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	background: #F1EEE5;
+	border: 1px solid #9a9a9a;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	color: #373737;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 3px;
+	padding: 5px 10px
+}
+
+a.macpay-activeTab {
+	background: #fff;
+	border-bottom: 1px solid #FFF!important;
+	font-weight: 700
+}
+
+.macpay-reviews_content {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 3px;
+	border: 1px solid #9a9a9a;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 3px;
+	font-family: arial;
+	font-size: 12px;
+	margin-top: -1px;
+	padding: 0 10px;
+	margin-bottom: 10px
+}
+
+.macpay-reviews_content .macpay-options {
+	margin-top: 10px
+}
+
+.macpay-description_content {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 3px;
+	border: 1px solid #9a9a9a;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 3px;
+	font-family: arial;
+	font-size: 12px;
+	margin-top: -1px;
+	padding: 0 10px 10px;
+	margin-bottom: 10px 0;
+	background: #fff;
+	font-size: 12px;
+}
+
+.macpay-left-thumbs {
+	font-size: 0;
+	text-align: left;
+	display: inline-block;
+	width: 261px
+}
+
+.macpay-left-thumbs img {
+	border: 2px solid #EBEBEB!important;
+	width: 80px;
+	margin-top: 10px
+}
+
+.macpay-left-thumbs a {
+	display: inline-block;
+	padding-right: 4px;
+	vertical-align: middle
+}
+
+.macpay-left-thumbs a:nth-child(3n) {
+	padding-right: 0!important
+}
+
+.macpay-left-thumbs span {
+	display: none
+}
+
+.macpay-videothumb img {
+	width: 84px;
+	height: auto;
+	border: 0 none!important
+}
+
+.macpay-videothumb span {
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	-webkit-transition: all .2s ease;
+	background: url(//www.macpay.ru/shop/img/play_icon.png) center center no-repeat;
+	display: block!important;
+	height: 60px;
+	margin-top: -59px;
+	position: absolute;
+	transition: All .2s ease;
+	width: 80px;
+	z-index: 999
+}
+
+.macpay-videothumb span:hover {
+	-moz-transform: scale(1.2) translate(1px);
+	-ms-transform: scale(1.2) translate(1px);
+	-o-transform: scale(1.2) translate(1px);
+	-webkit-transform: scale(1.2) translate(1px);
+	transform: scale(1.2) translate(1px)
+}
+
+.macpay-grey {
+	color: #787878
+}
+
+.macpay-labelaction {
+	background: #4CAF31;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4em;
+	margin-top: 0;
+	padding: 0 7px;
+	vertical-align: top
+}
+
+.macpay-labelnew {
+	background: #f8885b;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4em;
+	margin-top: 0;
+	padding: 0 7px;
+	vertical-align: top
+}
+
+.macpay-labellider {
+	background: #ff6681;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4em;
+	margin-top: 0;
+	padding: 0 7px;
+	vertical-align: top
+}
+
+.macpay-txtlnk {
+	color: #0B6678;
+	display: inline-block;
+	font-family: Tahoma, Arial;
+	font-size: 13px;
+	line-height: 1em;
+	padding: 3px 0;
+	text-decoration: none
+}
+
+.macpay-imglnk {
+	display: inline-block;
+	float: left;
+	padding-right: 10px
+}
+
+.macpay-breadcrumbs a:hover,
+.macpay-category ul a:hover {
+	text-decoration: underline
+}
+
+.macpay-category ul {
+	list-style-type: none;
+	padding: 0
+}
+
+li.macpay-category-active a,
+.macpay-bold {
+	font-weight: 700
+}
+
+li.macpay-category-active li a {
+	font-weight: normal!important
+}
+
+.macpay-pager-rows,
+.macpay-right {
+	float: right
+}
+
+.macpay-pager-rows span {
+	font-size: 13px;
+	color: #373737
+}
+
+.macpay-snapshot a {
+	text-decoration: none
+}
+
+.macpay-paging {
+	display: block;
+	vertical-align: middle;
+	/*width:100%;*/
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-family: tahoma, Arial;
+	padding: 10px 10px 13px 12px;
+	background: #EBEBEB;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.macpay-paging a {
+	font-family: tahoma, Arial;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #0B6678;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	text-decoration: none;
+	min-width: 12px;
+	padding: 0 3px;
+	cursor: pointer
+}
+
+.macpay-paging a.macpay-activepage {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #0a91c0;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	text-decoration: none;
+	min-width: 12px;
+	padding: 0 3px;
+	cursor: pointer
+}
+
+.macpay-productList {
+	margin-bottom: 10px
+}
+
+.macpay-reviewList {
+	margin-bottom: 10px
+}
+
+.macpay-article-desc,
+.macpay-prod-desc {
+	color: #373737;
+	display: block;
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 1.2em;
+	margin: 10px 0 0;
+	padding: 0 10px 10px 0
+}
+
+.macpay-category ul li {
+	list-style-type: none;
+	padding: 0 0 0 20px
+}
+
+.macpay-category > ul > li {
+	padding: 0!important
+}
+
+.macpay-category span {
+	color: #708787;
+	font-size: 11px
+}
+
+.macpay-review {
+	border-bottom: dashed 1px #ccc;
+	display: inline-block;
+	position: relative;
+	font-size: 14px;
+	color: #565656;
+	padding: 20px 10px 15px;
+	width: 98%
+}
+
+.macpay-review span {
+	display: inline-block
+}
+
+.macpay-review span.macpay-reviewdate {
+	color: #373737;
+	font-weight: bold;
+	padding-bottom: 2px;
+	display: block;
+	font-size: 11px
+}
+
+.macpay-reviewcomment {
+	margin-top: 4px;
+	margin-left: 10px
+}
+
+.macpay-reviewcomment span.macpay-reviewcommentadmintxt {
+	display: inline-block;
+	padding: 10px;
+	background: #f1eee5;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 14px
+}
+
+.macpay-reviewcommentarrow {
+	color: #f1eee5;
+	display: block!important;
+	line-height: 10px;
+	margin-left: 30px
+}
+
+.macpay-reviewList .macpay-paging {
+	margin-left: 10px
+}
+
+.macpay-filtersort {
+	display: inline-block;
+	float: left;
+	line-height: 27px;
+	margin-right: 10px;
+	padding: 5px 5px 5px 10px
+}
+
+.macpay-reviewgood {
+	color: #FFF;
+	background: #78cf6e;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	width: 16px;
+	height: 16px;
+	margin-right: 2px;
+	text-align: center;
+	font-weight: bold;
+	font-family: arial;
+	border: 1px solid #FFF
+}
+
+.macpay-reviewbad {
+	color: #FFF;
+	background: #ff7575;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	width: 16px;
+	height: 16px;
+	margin-right: 2px;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #FFF;
+	font-family: Tahoma;
+	text-shadow: 0 1px 0 #fff;
+	line-height: 1em
+}
+
+.macpay-contacts-block p {
+	color: #373737;
+	line-height: 1.2em
+}
+
+.macpay-contacts span.macpay-contacts-label {
+	width: 150px;
+	display: inline-block;
+	text-align: right;
+	padding: 4px 0;
+	color: #373737
+}
+
+.macpay-contacts .macpay-breadcrumbs {
+	padding-top: 0
+}
+
+.macpay-contacts span.macpay-contacts-value {
+	display: inline-block;
+	color: #333;
+	padding: 4px 0;
+	padding-left: 20px
+}
+
+.macpay-contacts-value > img {
+	vertical-align: top;
+}
+
+.macpay-contacts-block {
+	padding-top: 30px
+}
+
+.macpay-contacts-block a {
+	color: #0B6678;
+	text-decoration: none
+}
+
+.macpay-contacts-block a:hover {
+	text-decoration: underline
+}
+
+.macpay-social {
+	height: 24px;
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+	margin-top: 7px;
+	font-size: 0
+}
+
+a.macpay-social-vk {
+	cursor: pointer;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	text-decoration: none;
+	background: url(//www.macpay.ru/shop/img/vkontakte-24.png) top left no-repeat
+}
+
+a.macpay-social-fb {
+	cursor: pointer;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	text-decoration: none;
+	background: url(//www.macpay.ru/shop/img/facebook-24.png) top left no-repeat
+}
+
+a.macpay-social-tw {
+	cursor: pointer;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	text-decoration: none;
+	background: url(//www.macpay.ru/shop/img/twitter-24.png) top left no-repeat
+}
+
+a.macpay-social-wm {
+	cursor: pointer;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	text-decoration: none;
+	background: url(//www.macpay.ru/shop/img/webmoney-24.png) top left no-repeat
+}
+
+.macpay-bold {
+	color: #373737
+}
+
+.macpay-hidden {
+	display: none!important
+}
+
+.macpay-both {
+	clear: both
+}
+
+#macpay-view {
+	display: inline-block;
+	float: left;
+	padding: 5px;
+	vertical-align: middle;
+}
+
+#macpay-view span {
+	color: #373737;
+	font-size: 13px;
+	line-height: 27px;
+}
+
+.macpay-main input,
+.macpay-main select {
+	padding: 0;
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.macpay-product-toggle {
+	display: inline-block;
+	float: right;
+	font-size: 13px;
+	color: #cccccc;
+	padding-top: 10px;
+}
+
+.macpay-product-toggle span {
+	color: #0B6678;
+	font-family: Arial;
+}
+
+.macpay-product-toggle a {
+	color: #0B6678;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.macpay-product-toggle a:hover {
+	color: #0B6678;
+	text-decoration: underline;
+}
+
+
+/*__________________________________ Calculator ___________________________________*/
+
+.macpay-calc {
+	background: #e6e6e6;
+	/*background:#d4f4f9; ������-�������-����� */
+	font-size: 13px;
+	width: 240px;
+	border: 1px solid red;
+	padding: 10px;
+	margin-left: 10px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px 5px 5px 5px;
+	color: #373737;
+	position: relative;
+	right: -10px;
+}
+
+
+/*.macpay-calc > div {border:1px solid green;}
+.macpay-calc > div  > div {border:1px solid pink;}*/
+
+.macpay-calc select {
+	width: 100%;
+	margin-top: 4px;
+}
+
+.macpay-calc input[type="checkbox"] {
+	margin: 0;
+	vertical-align: middle;
+	dispay: inline-block;
+	margin-right: 5px;
+}
+
+.macpay-calc a.macpay-buyButton {
+	width: 48px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.macpay-calc a.macpay-buyButton-empty {
+	display: inline-block;
+}
+
+.macpay-calc-quanity .macpay-calc-left span b {
+	color: #d90000;
+}
+
+.macpay-calc-method,
+.macpay-calc-confirmation,
+.macpay-calc-buy,
+.macpay-calc-footer {
+	padding-bottom: 10px;
+}
+
+.macpay-calc-footer {
+	position: relative;
+	border-top: 1px #cccccc solid;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #a4a4a4
+}
+
+.macpay-calc-buy {
+	text-align: center;
+}
+
+.macpay-calc .macpay-buyButton {
+	float: none!important;
+}
+
+.macpay-calc .macpay-buyButton-empty {
+	float: none!important;
+}
+
+.macpay-calc-center .macpay-calc-arrowLeft {
+	vertical-align: middle;
+	display: inline-block;
+	background: url(../../img/macpay-calc-arrowIcon.png) center left no-repeat;
+	width: 20px;
+	height: 11px;
+}
+
+.macpay-calc-center .macpay-calc-arrowRight {
+	vertical-align: middle;
+	display: inline-block;
+	background: url(../../img/macpay-calc-arrowIcon.png) bottom left no-repeat;
+	width: 20px;
+	height: 11px;
+}
+
+.macpay-calc-center .macpay-calc-arrowLeftRight {
+	vertical-align: middle;
+	display: inline-block;
+	background: url(../../img/macpay-calc-arrowIcon.png) top left no-repeat;
+	width: 20px;
+	height: 11px;
+}
+
+.macpay-calc-method {
+	padding-top: 5px;
+}
+
+.macpay-calc-footer,
+.macpay-calc-footer a {
+	font-size: 11px;
+}
+
+.macpay-calc-limit {
+	display: inline-block;
+	float: right;
+	background: #fdbfbf;
+	border-radius: 4px;
+	padding: 3px;
+	line-height: 1em;
+	margin-right: 3px;
+	margin-top: -4px;
+	text-align: right;
+}
+
+.macpay-calc-confirmation {
+	padding: 7px;
+}
+
+.macpay-calc-confirmation a {
+	color: #0B6678;
+}
+
+.macpay-calc-footer a:hover,
+.macpay-calc-confirmation a:hover {
+	text-decoration: none;
+}
+
+.macpay-calc-method {
+	vertical-align: bottom;
+}
+
+.macpay-calc-quanity {
+	display: table;
+}
+
+.macpay-calc-quanity span,
+.macpay-calc-quanity input {
+	width: 100%;
+}
+
+.macpay-calc-quanity input {
+	margin-top: 5px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	line-height: 22px;
+	font-size: 18px;
+	color: #d90000;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+div.macpay-calc-quanity div.macpay-calc-left span {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap
+}
+
+.macpay-calc-confirmation-error {
+	background: #fdbfbf;
+	border-radius: 4px;
+	padding: 7px;
+}
+
+.macpay-calc-right input {
+	color: #000;
+}
+
+.macpay-calc-quanity input:focus {
+	border-color: #0B6678;
+}
+
+.macpay-calc-quanity > div {
+	display: table-cell;
+}
+
+.macpay-calc-quanity > div.macpay-calc-left {
+	display: table-cell;
+	width: 40%;
+}
+
+.macpay-calc-quanity > div.macpay-calc-center {
+	display: table-cell;
+	padding-left: 6px;
+	padding-top: 16px;
+	vertical-align: middle;
+	width: 27px;
+}
+
+.macpay-calc-quanity > div.macpay-calc-right-value {
+	vertical-align: bottom;
+	padding-bottom: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.macpay-calc-quanity > div.macpay-calc-right {
+	display: block;
+	margin-left: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.macpay-calc-quanity > div.macpay-calc-right span {
+	white-space: nowrap;
+}
+
+.macpay-calc select option {
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	cursor: pointer;
+}
+
+.macpay-calc-quanity > div.macpay-calc-right select {
+	height: 28px;
+	border-radius: 3px;
+	border: 1px #ccc solid;
+	font-size: 18px;
+}
+
+.macpay-calc-option {
+	background: url(http://macpay.ru/shop/img/macpay-calc-icons.png) no-repeat;
+	padding-left: 30px;
+	background-position: -400px;
+}
+
+.macpay-calc-wmr,
+.macpay-calc-wmz,
+.macpay-calc-wmu,
+.macpay-calc-wmd,
+.macpay-calc-wme {
+	background-position: 5px -36px!important;
+}
+
+.macpay-calc-qsr {
+	background-position: 5px -67px!important;
+}
+
+.macpay-calc-pcr {
+	background-position: 5px -95px!important;
+}
+
+.macpay-calc-mmr {
+	background-position: 5px -366px;
+}
+
+.macpay-calc-mts {
+	background-position: 5px -127px;
+}
+
+.macpay-calc-bln {
+	background-position: 5px -157px;
+}
+
+.macpay-calc-mgf {
+	background-position: 5px -185px;
+}
+
+.macpay-calc-tl2 {
+	background-position: 5px -217px;
+}
+
+.macpay-calc-sms {
+	background-position: 5px -277px;
+}
+
+.macpay-calc-rcc {
+	background-position: 5px -428px;
+}
+
+.macpay-calc-occ {
+	background-position: 5px -428px;
+}
+
+.macpay-calc-alf {
+	background-position: 5px -305px;
+}
+
+.macpay-calc-prr {
+	background-position: 5px -366px;
+}
+
+.macpay-calc-atm {
+	background-position: 5px -247px;
+}
+
+.macpay-calc-ppz {
+	background-position: 5px -337px;
+}
+
+.macpay-calc-ppr {
+	background-position: 5px -337px;
+}
+
+.macpay-calc-ppe {
+	background-position: 5px -337px;
+}
+
+.macpay-calc-ppu {
+	background-position: 5px -337px;
+}
+
+.macpay-calc-gft {
+	background-position: 5px -396px;
+}
+
+.macpay-calc-ppl {
+	background-position: 5px -458px;
+}
+
+.macpay-calc-mrr {
+	background-position: 5px -488px;
+}
+
+
+/*table view*/
+
+.macpay-tableHolder {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.macpay-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.macpay-table .macpay-browseProdTitle a {
+	font-size: 14px;
+}
+
+.macpay-table .macpay-buyButton {
+	float: right;
+	background: none transparent;
+	color: #0b6678;
+	text-decoration: none;
+	padding: 0 10px;
+}
+
+.macpay-table .macpay-buyButton-empty {
+	float: right;
+	background: none transparent;
+	font-weight: normal;
+	color: #b7b7b7;
+	text-shadow: 0px 1px 0px #fff;
+	text-decoration: none;
+	padding: 0 10px;
+}
+
+.macpay-table .macpay-buyButton:hover {
+	color: #0A91C0;
+	text-decoration: underline;
+}
+
+.macpay-table tr:nth-child(2n) {
+	background: #f1f1f1;
+}
+
+.macpay-table-left,
+.macpay-table-right {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.macpay-table-left {
+	padding-left: 10px;
+}
+
+.macpay-table-left a {
+	text-decoration: none;
+	color: #0B6678;
+	cursor: pointer;
+}
+
+.macpay-table-left a:hover {
+	text-decoration: underline;
+}
+
+.macpay-table-right {
+	text-align: right;
+}
+
+.macpay-table-right div {
+	min-width: 240px;
+	float: right;
+}
+
+.macpay-table-right span {
+	display: inline-block;
+	color: #d90000;
+	padding-right: 15px;
+}
+
+.macpay-table-right a {
+	display: inline-block;
+	font-weight: bold;
+	min-width: 95px;
+}
+
+
+/*end table view */
+
+.macpay-category ul a {
+	color: #0d73a8;
+}
+
+
+/* ���� ��������� � ����� ���� */
+
+.macpay-prod-info h3 {
+	border-bottom: 1px dashed #222222;
+	color: #222222;
+	margin-bottom: 8px;
+	padding-bottom: 3px;
+}
+
+.macpay-prod-info {
+	padding-top: 20px;
+	color: #1a1a1a;
+}
+
+.macpay-options {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #ababab;
+	border-radius: 3px;
+	border-radius: 3px;
+	margin-top: 2px;
+	display: inline-block;
+	width: 100%
+}
+
+.macpay-prod-name {
+	color: #2c2c2c;
+	font-size: 24px;
+	line-height: 1.1em;
+	margin: 10px 0;
+	text-decoration: none
+}
+
+.macpay-snapshot span.macpay-snapname {
+	color: #2c2c2c;
+	display: block;
+	min-width: 130px;
+	font-family: Tahoma, Arial;
+	font-size: 15px;
+	height: 34px;
+	overflow: hidden;
+	padding: 5px 5px 0 10px;
+	text-align: left
+}
+
+.macpay-category-blocks a {
+	color: #0d73a8;
+}
+
+
+/* ���� �������� ������ �� ������� */
+
+.macpay-breadcrumbs a {
+	color: #0d73a8;
+}
+
+
+/* ���� "������� ������" */
+
+.macpay-search-go {
+	background-color: #0d73a8;
+}
+
+
+/* ���� ������ ������ */
+
+.macpay-search-go:hover {
+	background-color: #4cb4fd;
+}
+
+
+/* ���� ������ ������ ��� ��������� */
+
+.macpay-browseProdTitle a.macpay-product-details {
+	color: #0d73a8;
+}
+
+
+/* ���� ������ "���������" */
+
+.macpay-paging a {
+	background-color: #0d73a8;
+}
+
+
+/* ���� ������� ������� */
+
+.macpay-paging a.macpay-activepage {
+	background-color: #4cb4fd;
+}
+
+
+/* ���� ������ �������� �������� */
+
+
+}
+a.macpay-buyButton {
+	background-color: #0d73a8;
+}
+/* ���� ������ "������" */
+a.macpay-buyButton:hover {
+	background-color: #3199C7;
+}
+/* ���� ������ "������" ��� ��������� */
+
+/* ���������� ������ � �������� ���� */
+
+/* ������������� ������ ������ 24x24 px */
+.macpay-topmenu a {
+	border-right: 0 none;
+	margin-left: 10px;
+}
+/* - ������� �����������, ����������� ���������� */
+
+/* ������ ��� "��� �������" */
+a.macpay-myorderslnk {
+	background: url(http://www.macpay.ru/shop/img/icon3.png) left center no-repeat;
+	padding-left: 27px;
+}
+
+/* ������ ��� "������ �����������" */
+a.macpay-reviewslnk {
+	background: url(http://www.macpay.ru/shop/img/icon1.png) left center no-repeat;
+	padding-left: 24px;
+}
+
+/* ������ ��� "��������" */
+a.macpay-contactslnk {
+	background: url(http://www.macpay.ru/shop/img/icon2.png) left center no-repeat;
+	padding-left: 27px;
+}
+
+
+
+
+/* The input. */
+input.mp_input {
+  border: 1px solid #000000;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  outline: none;
+  padding: 3px;
+  width: 250px;
+}
+
+/* Ordered list for display results. */
+ol.mp_list {
+  background-color: #FFFFFF;
+  border-left: 1px solid #C0C0C0;
+  border-right: 1px solid #C0C0C0;
+  overflow: hidden;
+  position: absolute;
+  width: 256px;
+  z-index: 99999;
+}
+
+/* Each list item, regardless of success, error, etc. */
+ol.mp_list li {
+  border-bottom: 1px solid #C0C0C0;
+  padding: 4px 4px 5px;
+}
+
+/* Each list item from a successful request. */
+ol.mp_list li.mp_item {
+
+}
+
+/* Each list item that's selectable. */
+ol.mp_list li.mp_selectable {
+  cursor: pointer;
+}
+
+/* Currently highlighted list item. */
+ol.mp_list li.mp_highlighted {
+  background-color: #E0E0E0;
+}
+
+/* When a request is made that returns zero results. */
+ol.mp_list li.mp_no_results {
+
+}
+
+/* When a request is made that doesn't meet the 'minChars' length option. */
+ol.mp_list li.mp_min_chars {
+
+}
+
+/* When a request is made that fails during the ajax request. */
+ol.mp_list li.mp_error {
+
+}
+
+.ui-widget-content {
+	border: 1px solid #c5c5c5;
+}

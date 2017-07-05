@@ -1,0 +1,18 @@
+http://obn-test.shopsn.su/#
+
+http://unitpay.ru
+
+Цена будет браться из добавленного товара
+
+фтп для оплаты
+51.254.210.62
+test12js
+Dsd6gSD6gsad876GSD8796
+
+
+Все что с оплатой связано находится в 3 файлах
+app/core.php
+/app/system/order.php
+/app и тут сам файл оплаты
+
+Тестовый сайт http://test-shop.shopsn.su

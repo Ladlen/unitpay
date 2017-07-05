@@ -1,0 +1,55 @@
+.left, .lcol{float:left !important;}
+.right, .rcol{float:right !important;}
+
+.response-form{padding-bottom:12px;border-bottom:1px solid #e6e6e6;overflow:hidden;margin-bottom:12px;}
+.response-form .row{width:286px;float:left;margin-bottom:8px;}
+.response-form .row input{height:33px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#f4f4f4;border:none;color:#595959;}
+.response-form textarea{min-height:108px;}
+.captcha{overflow:hidden;height:33px;float:left;}
+.captcha .view-captcha{width:75px;height:33px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-color:#ee8689;color:#fff;text-align:center;line-height:33px;float:left;margin-right:8px;position:relative;overflow:hidden;-ms-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;}
+.captcha .write-captcha{float:left;width:99px;height:33px;text-align:center;}
+.captcha .view-captcha .secure{width:75px;height:33px;position:absolute;background:#000;opacity:0;overflow:hidden;z-index:999;}
+.submit-form{width:87px;float:right;padding:0;}
+.response-loop{position:relative;overflow:hidden;margin-bottom:5px;}
+.response-cont {
+  background: rgba(255, 255, 255, 0.16);
+  padding: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  color: #EDEDED;
+}
+.response-arrow{background:url(../images/response-arrow.png)/*tpa=http://steamplaycs.ru/templates/0/images/response-arrow.png*/ no-repeat;width:9px;height:6px;display:block;margin-left:20px;margin-bottom:5px;}
+.green{
+	color: #538f00 !important;
+	font-weight: 100 !important;
+	margin-bottom: 0 !important;
+	padding: 0 !important;
+	font-size: 12px !important;
+	text-transform: none !important;
+	display: initial !important;
+}
+.red{
+	color:#f3484c;
+	font-weight: 100 !important;
+	margin-bottom: 0 !important;
+	padding: 0 !important;
+	font-size: 12px !important;
+	text-transform: none !important;
+	display: initial !important;
+}
+.response-loop .rcol{color:#777;font-size:12px;}
+
+.paginator2 li {
+  float: left;
+  background-color: #f4f4f4;
+  color: #8c8c8c;
+  padding: 0px 4px;
+  margin-right: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  list-style-type: none;
+}
