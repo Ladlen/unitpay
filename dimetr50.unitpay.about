@@ -16,3 +16,27 @@ app/core.php
 /app и тут сам файл оплаты
 
 Тестовый сайт http://test-shop.shopsn.su
+
+-----------------------
+
+
+Сайт http://dropkey.ru фтп проверь тоже, стурктуру что именно? могу скрины дать
+5 июл, 18:56
+dimetr50
+Админка
+http://dropkey.ru/admin
+test@mail.ru
+qwe123
+Там вкладка настройки можешь посмотреть как другие оплаты настраиваются
+
+---------------------
+
+"SELECT * FROM `items` WHERE `sid` = '".intval(SID)."' ".("AND `main` = '1'")." ORDER BY item_id ASC"
+    => SELECT * FROM `items` WHERE `sid` = '10031' AND `main` = '1' ORDER BY item_id ASC
+$row['price']
+$row['image']
+$row['item_id']
+<?=$price['WMR'];?> РУБЛЕЙ
+$row['item'] - a name???
+$row['type'] == 'file'
+$row['count']

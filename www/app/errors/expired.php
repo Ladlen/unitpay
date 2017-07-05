@@ -1,7 +1,3 @@
-<?php
-$r = 0;
-
-?>
 <!DOCTYPE html>
 <html>
 	<head>

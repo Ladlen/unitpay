@@ -189,6 +189,30 @@
 						<td>Секретный код Payeer:</td>
 						<td><input name="settings[py_key]" value="<?=$obj['py_key'];?>" class="form-control" type="text"></td>
 					</tr>
+
+					<tr>
+						<td>Unitpay включен?</td>
+						<td>
+							<select name="wallets[UNITPAY]">
+								<option value="0" <?=($WALLET['UNITPAY'] == FALSE ? 'selected' : '');?>>Выключен</option>
+								<option value="1" <?=($WALLET['UNITPAY'] == TRUE ? 'selected' : '');?>>Включен</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							PUBLIC KEY Unitpay:<br />
+							Можно найти на странице проекта в специальном разделе личного кабинета "Форма оплаты"
+						</td>
+						<td><input name="settings[unitpay_public_key]" value="<?=$obj['unitpay_public_key'];?>" class="form-control" type="text"></td>
+					</tr>
+					<tr>
+						<td>
+							SECRET KEY Unitpay:<br />
+							См. раздел "настройки проекта" на странице проекта в личном кабинете
+						</td>
+						<td><input name="settings[unitpay_secret_key]" value="<?=$obj['unitpay_secret_key'];?>" class="form-control" type="text"></td>
+					</tr>
 					
 					<tr>
 						<td>Тип авторизации:</td>

@@ -1,0 +1,10 @@
+.ui-tabs { position: relative; zoom: 1; }
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px;}
+.ui-tabs .ui-tabs-nav li a { float: left; text-decoration: none; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; }
+.ui-tabs .ui-tabs-panel { display: block;}
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+

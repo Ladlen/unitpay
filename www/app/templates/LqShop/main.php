@@ -125,7 +125,8 @@ margin-left: 367px;
 			$SQL = mysqli_query($this->connectMainBD, "SELECT * FROM `items` WHERE `sid` = '".intval(SID)."' ".(Defined('SEARCH') ? "AND `item` LIKE '%".mysqli_real_escape_string($this->connectMainBD, SEARCH)."%'" : "AND `main` = '1'")." ORDER BY item_id ASC");
 		}
 	?>
-	<? if(mysqli_num_rows($SQL) > 0){  
+	<? //if(mysqli_num_rows($SQL) > 0){
+		if (1) {
 	?>
 	<style>
 	body {
@@ -143,7 +144,10 @@ margin-left: 367px;
 			<th style="border-right-color: rgba(0, 0, 0, 0); color: <?=COLORLQSHOPCOLOR;?>;">Купить</th>
 		</thead>
 		<tbody>
-			<? while($row = mysqli_fetch_array($SQL)){ 	?>
+			<?
+				//while($row = mysqli_fetch_array($SQL)){
+			{ $row = ['price'=>10.1, 'item_id'=>2,'WMR'=>10.1,'item'=>'Название итем','type'=>'str','count'=>2];
+					?>
 			<? $price = json_decode($row['price'], true); ?>
 			<tr title="<div><?= strip_tags($row['body'])?></div>">
 				<!--<td class="modgl">-->

@@ -1,0 +1,10 @@
+var shown=0;function reloadPrice(){$('.curency a').click(function(){var currency=$(this).attr('id');var html=$.ajax({type:"POST",url:"main/ajaxReloadPrice",data:{'currency':currency,},dataType:"html",async:false});location.reload(true);});}
+function reloadSort(){$('.filter').click(function(){var sort=$(this).attr('id');var html=$.ajax({type:"POST",url:"main/ajaxReloadSort",data:{'sort':sort,},dataType:"html",async:false});location.reload(true);});}
+function showMoreRes(showNumber,count){shown=shown+ showNumber;var html=$.ajax({type:"POST",url:"statics/ajaxResponseMore",data:{'shown':shown},success:function(html){if(shown+ showNumber>=count){$("#showMoreLi").hide();}
+$('#ajaxShowMore').append(html);},dataType:"html",async:false}).responseText;}
+function showMoreStock(showNumber,count){shown=shown+ showNumber;var html=$.ajax({type:"POST",url:"statics/ajaxStockMore",data:{'shown':shown},success:function(html){if(shown+ showNumber>=count){$("#showMoreLi").hide();}
+$('#ajaxShowMore').append(html);},dataType:"html",async:false}).responseText;}
+function showMore(showNumber,id,count){shown=shown+ showNumber;var html=$.ajax({type:"POST",url:"goods/ajaxCommentMore",data:{'shown':shown,'id':id,},success:function(html){if(shown+ showNumber>=count){$("#showMoreLi").hide();}
+$('#ajaxShowMore').append(html);},dataType:"html",async:false}).responseText;}
+function addComment(id){var html=$.ajax({type:"POST",url:"goods/ajaxCommentAdd",data:{'com_author':$('#com_author').val(),'com_email':$('#com_email').val(),'com_text':$('#com_text').val(),'ccode':$('#ccode').val(),'captcha':$('#captcha').val(),'gds_id':id},success:function(html){$('#ajaxComAddMsg').empty().append(html).animate({'opacity':'hide'},30000000);},dataType:"html",async:false}).responseText;}
+function addResponse(){var html=$.ajax({type:"POST",url:"response/ajaxResponseAdd",data:{'res_author':$('#res_author').val(),'res_email':$('#res_email').val(),'res_text':$('#res_text').val(),'ccode':$('#ccode').val(),'captcha':$('#captcha').val()},success:function(html){$('#ajaxResAddMsg').empty().append(html).animate({'opacity':'hide'},300000);},dataType:"html",async:false}).responseText;}

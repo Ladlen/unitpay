@@ -1,0 +1,756 @@
+/*=============================
+CASES
+=============================*/
+.opencase .opencase-top {
+    margin: 10px auto 0;
+    width: 600px;
+    height: 154px;
+    background-color: #fff;
+    border: 2px solid rgb(188, 213, 130);
+}
+.opencase .opencase-top .opencase-top-case {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.opencase .opencase-top .opencase-top-carousel {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+.opencase .opencase-top .opencase-top-carousel .opencase-top-carousel-line {
+    position: relative;
+    left:150px;
+    width: 99999px;
+    height: 100%;
+}
+.case-picture {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.case-picture img{
+	vertical-align: middle;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	max-width: 100%;
+    max-height: 100%;
+}
+.opencase-bottom-open{
+    border: none;
+    position: relative;
+    transition: 0.3s;
+    margin: 0px auto;
+    height: 70px;
+    background: url(/template/img/orange-btn-center.png) repeat-x;
+    background-size: contain;
+    letter-spacing: 1px;
+    padding: 20px 0 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+	cursor: pointer;
+}
+.opencase-bottom .btn-opencase {
+
+}
+
+.opencase .opencase-bottom .opencase-bottom-open:hover {
+    -webkit-filter: brightness(120%);
+    -moz-box-shadow: 0 20px 30px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0 20px 30px rgba(0,0,0,0.65);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.65);
+}
+.case-description{
+    margin: 0 0 25px;
+    font-size: 25px;
+    text-align: center;
+}
+.case-description:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: #292b36;
+}
+.case .items {
+	font-size: 0;
+}
+.case .item{
+
+}
+.case .item figure{
+	height: 82px;
+	width: auto;
+    margin: 5px;
+	background: url(../img/case-itembg.jpg) center no-repeat;
+}
+.case .bottom{
+	text-align: left;
+	color: #fff;
+	font-size: 10px;
+	text-shadow: #000 1px 1px 1px;
+	padding: 8px;
+	border-top: 2px solid #4a4a4a;
+	background: linear-gradient(-45deg, #432662, #6533a5);
+	height: 48px;
+}
+.case .item span{
+	display: block;
+}
+
+.opencase {
+	overflow: hidden;
+}
+
+.opencase-opened {
+	width: 100%;
+	max-width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+.opencase-opened:before {
+    display: block;
+    content: "";
+    background: rgba(0,0, 0, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+}
+.winnerbox {
+    min-width: initial;
+    width: 800px;
+    height: 600px;
+    margin: auto auto;
+    text-align: center;
+    top: 50%;
+    position: relative;
+    margin-top: -300px;
+    border-radius: 3px;
+    color: #424202;
+}
+.opencase-opened .opencase-opened-title,
+.opencase-opened .opencase-opened-drop,
+.opencase-opened .opencase-opened-congrat,
+.opencase-opened .opencase-opened-out {
+	text-align: center;
+}
+.opencase-opened .opencase-opened-title {
+	padding-top: 30px;
+	color: #96d9ff;
+	font-size: 29px;'
+	color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    position: relative;
+    z-index: 25;
+    font-size: 36px;
+    line-height: 38px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.opencase-opened .opencase-opened-image {
+    height: 140px;
+    width: 270px;
+    position: relative;
+    display: inline-block;
+    z-index: 25;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+.opencase-opened .opencase-opened-image img {
+    height: auto;
+    width: 100%;
+    position: relative;
+    transition: 0.6s;
+}
+.opencase-opened .opencase-opened-image:hover img {
+    transform: scale(1.3);
+}
+.opencase-opened .opencase-opened-image:after {
+    content: "";
+    background: linear-gradient( rgba(53,49,43,0) 0%, #35312b 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.wp-light {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.wp-light.colored{
+	width: 1000px;
+    max-width: 1000px;
+    margin: 0 auto;
+    top: -87px;
+    left: -79px;
+	/* background-image: url("/template/images/winner_light_rare.png");
+	background-size: contain;
+    background-repeat: no-repeat; */
+	background-image: url(/template/images/winner_light_rare.png);
+    background-position: 50%;
+	-webkit-animation-name: disappearance; */
+    -webkit-animation-duration: 7000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: disappearance;
+    -moz-animation-duration: 7000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: disappearance;
+    -ms-animation-duration: 7000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: disappearance;
+    animation-duration: 7000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.wp-light.static{
+	width: 900px;
+    left: -60px;
+    top: -100px;
+	background-image: url(/template/images/winner_light.png);
+    background-position: 50%;
+}
+.wp-light.anim{
+    top: 50%;
+    left: 50%;
+    margin-left: -247px;
+    margin-top: -360px;
+    width: 494px;
+    height: 452px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 20000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 20000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 20000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 20000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes disappearance {
+0%{opacity:1;filter:alpha(opacity=100)}
+50%{opacity:.2;filter:alpha(opacity=20)}
+100%{opacity:1;filter:alpha(opacity=100)}
+}
+@-webkit-keyframes disappearance {
+0%{opacity:1;filter:alpha(opacity=100)}
+50%{opacity:.2;filter:alpha(opacity=20)}
+100%{opacity:1;filter:alpha(opacity=100)}
+}
+
+@-ms-keyframes spin {
+from{-ms-transform:rotate(0deg)}
+to{-ms-transform:rotate(360deg)}
+}
+@-moz-keyframes spin {
+from{-moz-transform:rotate(0deg)}
+to{-moz-transform:rotate(360deg)}
+}
+@-webkit-keyframes spin {
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+@keyframes spin {
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+.opencase-opened .opencase-opened-image:before {
+    /* content: ""; */
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/template/images/win_bg.png");
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 600ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 600ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 600ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.opencase-opened .opencase-opened-drop {
+    z-index: 99;
+    line-height: 38px;
+    text-align: center;
+    font-size: 18px;
+    color: #f2f3df;
+    font-weight: 400;
+    height: 18px;
+    margin-top: -18px;
+    position: relative;
+    top: -19px;
+    white-space: nowrap;
+}
+.opencase-opened .opencase-opened-congrat {
+	padding: 5px;
+    width: 175px;
+    font-size: 23px;
+    text-transform: uppercase;
+    margin: 10px auto;
+	z-index: 99;
+    position: relative;
+}
+.opencase-opened .opencase-opened-out {
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 99;
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+.opencase-opened .opencase-opened-actions {
+	width: 405px;
+    margin: 20px auto;
+	z-index: 99;
+    position: relative;
+}
+.opencase-opened .opencase-opened-actions:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.opencase-opened .opencase-opened-actions a {
+    background-color: #A52A2A;
+    text-align: center;
+    color: #fcfafa;
+    height: 42px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-top: 12px;
+    width: 200px;
+}
+.opencase-opened .opencase-opened-actions .opencase-opened-actions-one {
+	cursor: pointer;
+}
+.opencase-opened .opencase-opened-actions .opencase-opened-actions-one .opencase-opened-actions-one-image {
+	margin: 0px auto;
+	width: 60px;
+	height: 60px;
+	background-size: cover;
+	background-position: center;
+}
+.opencase-opened .opencase-opened-actions .opencase-opened-actions-one .opencase-opened-actions-one-text {
+
+}
+.s__again {
+    margin: 10px auto;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0b1a21;
+    padding: 10px 20px;
+    background-color: #efbd12;
+    border-radius: 3px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.opencase-opened .opencase-opened-actions .opencase-opened-actions-one.s__again .opencase-opened-actions-one-image {
+	background-image: url(../images/opened_again.png);
+}
+.opencase-opened .opencase-opened-actions .opencase-opened-actions-one.s__sell .opencase-opened-actions-one-image {
+	background-image: url(../images/opened_sell.png);
+}
+.opencase-opened .opencase-opened-links {
+	margin-top: 10px;
+	padding-top: 10px;
+	width: 250px;
+	text-align: center;
+}
+.opencase-opened .opencase-opened-links a {
+	color: #509efe;
+	font-size: 15px;
+	text-decoration: none;
+}
+.opencase-opened .opencase-opened-links a:not(:first-child) {
+	margin-left: 20px;
+}
+.opencase-opened .opencase-opened-links a:hover {
+	color: #92c1fb;
+	text-decoration: underline;
+}
+.opencase-top .opencase-top-carousel .opencase-top-carousel-line:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.opencase-top .opencase-top-carousel .opencase-top-carousel-line .opencase-top-carousel-line-item {
+	float: left;
+	padding: 5px;
+	width: 280px;
+	height: 100%;
+    position: relative;
+}
+.opencase-top .opencase-top-carousel-line-item-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+    z-index: 1;
+}
+.opencase-top .opencase-top-carousel-line-item-image:before {
+    content: "";
+    background: linear-gradient( rgba(53,49,43,0) 0%, #35312b 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.opencase-top .opencase-top-carousel-line-item-image img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s;
+}
+.opencase-top .opencase-top-carousel .opencase-top-carousel-line .opencase-top-carousel-line-item .opencase-top-carousel-line-item-text {
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0px;
+    line-height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 18px;
+    color: #f2f3df;
+    font-weight: 400;
+    height: 18px;
+    white-space: nowrap;
+    z-index: 4;
+}
+
+
+.opencase-top .opencase-top-carousel .opencase-top-carousel-selector {
+	position: absolute;
+	top: 0px;
+	left: 293px;
+	width: 2px;
+	height: 100%;
+	background-color: #F24841;
+    z-index: 5;
+}
+.opencase-bottom {
+    margin: 0 auto;
+    height: 110px;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 20;
+    width: 600px;	
+}
+
+
+.opencase-bottom .opencase-bottom-auth {
+	display: none;
+    margin: 0px -10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.opencase-bottom-auth .btn {
+    border-radius: 0;
+    margin: 24px 10px 0;
+    font-size: 30px;
+    width: 290px;
+    padding: 10px;
+}
+
+.opencase-bottom .opencase-bottom-items {
+	display: none;
+	color: #ef6363;
+    text-align: center;
+	border: 2px solid;
+    padding: 5px;
+    font-size: 18px;
+	margin: 0 auto;
+    width: 400px;
+}
+
+.opencase-bottom .opencase-bottom-norealfunds {
+	display: none;
+	color: #ef6363;
+    text-align: center;
+	border: 2px solid;
+    padding: 5px;
+    font-size: 18px;
+	margin: 0 auto;
+    width: 400px;
+}
+
+.opencase-bottom .opencase-bottom-link {
+    display: none;
+    color: #ef6363;
+    text-align: center;
+    border: 2px solid;
+    padding: 5px;
+    font-size: 24px;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.opencase-bottom .opencase-bottom-link a{
+    text-decoration: underline;
+	color: #ef6363;
+}
+
+.opencase-bottom .opencase-bottom-link a:hover{
+    text-decoration: none;
+}
+
+.opencase-bottom .opencase-bottom-action {
+	display: none;
+	color: #ef6363;
+    text-align: center;
+	border: 2px solid;
+    padding: 5px 5px 10px;
+    font-size: 18px;
+	margin: 0 auto;
+    width: 400px;
+}
+
+.opencase-bottom .opencase-bottom-opening {
+	display: none;
+	color: #616e63;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-top: 50px;
+}
+.opencase-bottom .opencase-bottom-nofunds {
+	display: none;
+}
+.opencase-bottom .opencase-bottom-nofunds .opencase-bottom-nofunds-title {
+	color: #ef6363;
+	font-size: 19px;
+	text-transform: uppercase;
+}
+
+.opencase-bottom .opencase-bottom-nofunds .opencase-bottom-nofunds-add {
+	margin-top: 10px;
+}
+.opencase-bottom-nofunds-add .add-money{
+	position: relative;
+	top: -2px;
+	margin-left: 5px;
+}
+.opencase-bottom .opencase-bottom-nofunds .opencase-bottom-nofunds-add .opencase-bottom-nofunds-add-sum {
+	width: 75%;
+}
+.opencase-bottom .opencase-bottom-nofunds .opencase-bottom-nofunds-add .opencase-bottom-nofunds-add-btn {
+    width: 150px;
+    height: 38px;
+    display: inline-block;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 21px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: #2499a5;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
+
+ .opencase-drops {
+	margin-top: 40px;
+	margin-bottom: 75px;
+	width: 900px;
+}
+.opencase-drops:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.opencase-drops .opencase-drops-one {
+	float: left;
+	width: 150px;
+	padding: 10px;
+}
+.opencase-drops .opencase-drops-one > div {
+	background-color: #3e88a8;
+}
+.opencase-drops .opencase-drops-one .opencase-drops-one-image {
+	width: 130px;
+	height: 105px;
+	background-size: 85%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.opencase-drops .opencase-drops-one .opencase-drops-one-text {
+	margin-top: 5px;
+	padding: 5px 10px;
+}
+.opencase-drops .opencase-drops-one .opencase-drops-one-text > div {
+	height: 15px;
+	font-size: 11px;
+	line-height: 15px;
+	text-overflow: hidden;
+}
+.opencase-drops .opencase-drops-one .opencase-drops-one-text > div:first-child {
+	color: #ace2f9;
+}
+.opencase-drops .opencase-drops-one .opencase-drops-one-text > div:last-child {
+	color: #fff;
+}
+
+.none {
+	display: none;
+}
+
+.case .common .bottom{ background: linear-gradient(-45deg, #797a81, #595b66); }
+.case .milspec .bottom{	background: linear-gradient(-45deg, #262e5f, #3747a6); }
+.case .uncommon .bottom{ background: linear-gradient(-45deg, #262e5f, #3747a6); }
+.case .restricted .bottom{ background: linear-gradient(-45deg, #432662, #6533a5); }
+.case .classified .bottom{ background: linear-gradient(-45deg, #601d59, #a21e9e); }
+.case .covert .bottom{ background: linear-gradient(-45deg, #6a2326, #b93432); }
+/*=============================
+LIBRERY END
+=============================*/
+
+.text-center{
+	text-align: center;
+}
+input:focus::-webkit-input-placeholder {color: transparent;}
+input:focus::-moz-placeholder          {color: transparent;}/* Firefox 19+ */
+input:focus:-moz-placeholder           {color: transparent;}/* Firefox 18- */
+input:focus:-ms-input-placeholder      {color: transparent;}
+textarea:focus::-webkit-input-placeholder {color: transparent;}
+textarea:focus::-moz-placeholder          {color: transparent;}/* Firefox 19+ */
+textarea:focus:-moz-placeholder           {color: transparent;}/* Firefox 18- */
+textarea:focus:-ms-input-placeholder      {color: transparent;}
+
+
+.popup_layout {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+	display: none;
+    background: rgba(0,0,0,0.5);
+}
+.popup-wrapper{
+	position: relative;
+    height: 300px;
+    width: 420px;
+    top: 50%;
+    margin: -150px auto 0;
+	z-index: 5;
+
+}
+.popup-wrapper .add-money {
+    top: -2px;
+    position: relative;
+    margin: 0 10px;
+}
+.popup-wrapper .red-field {
+	width: 289px;
+}
+.popup_close.close-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+	cursor: pointer;
+}
+.popup_close.x {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #ba3a21;
+    font-weight: 700;
+}

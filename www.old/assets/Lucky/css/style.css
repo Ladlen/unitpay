@@ -1,0 +1,109 @@
+
+
+.btnbuy {
+	margin-top:16px;
+}
+.hnomarg {
+	margin-top:0px!important;
+}
+@font-face { font-family: "Rubl Sign"; src: url(http://www.artlebedev.ru/;-)/ruble.eot); }
+
+span.rur { font-family: "Rubl Sign"; text-transform: uppercase; // text-transform: none;}    
+span.rur span { position: absolute; overflow: hidden; width: .45em; height: 1em; margin: .1ex 0 0 -.55em; // display: none; }
+span.rur span:before { content: '\2013'; }
+
+.iconurl {
+	max-width:40px;
+	max-height:40px;
+	margin-right:10px;
+}
+.paytable{
+	width:100%;
+}
+
+.footcopy {
+	display:block;
+	text-align:center;
+	font-size:11px;
+}
+	
+d{
+text-align: center;
+font-size: 12px;
+background-color:rgb(196, 196, 196);
+width: 38%;
+margin: 0 auto 10px;
+border-radius: 5px;
+text-shadow: -1px -1px 1px rgba(255,255,255,.3),1px 1px 3px rgba(0,0,0,.3);
+padding: 1px;
+border: rgb(31, 31, 31) 2px solid;}
+
+
+
+.form-controler {
+display: block;
+width: 100%;
+height: 38px;
+padding: 8px 12px;
+font-size: 14px;
+line-height: 1.428571429;
+color: #1d1313;
+vertical-align: middle;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.right-panel { display: inline-block;  width: 660px;}
+.buy { height: 50px;  margin-top:20px;}
+.descr { font-style:italic;}
+.modal-body { border: 1px solid #000; overflow: hidden;}
+ div.selector {width: 400px;  position: relative; margin:25px 0 20px 10px;  display: block; height: 4px;   }
+ div.selector > .p_line{ width:385px; margin:0 auto;  display: block; height: 6px; border-radius: 3px; background: #747474; }
+ div.selector > .resize { position: relative; border-radius: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.2); background: #557ca5; top: -14px;  z-index:40;  cursor: e-resize;  height: 20px; width: 20px; }
+ div.selector > .resize:before {content: '';
+width: 385px; margin:8px 0 0 -385px;   background: rgba(255,255,255,0.7); position:absolute; z-index:1; display: block; height: 6px; }
+.min_text, .max_text { 
+	 text-align: center; position: absolute;
+	display: inline-block; margin-top:-7px;
+	 height: 23px;   font-size:12px;
+	line-height: 25px; 
+	width: 40px; color:#ccc;
+	 color:#ccc; 
+	 }
+.comment{
+   border:1px solid #666;
+   margin:10px;
+   padding:10px;
+   font-family:Tahoma;
+   font-size:12px;
+   border-radius:4px;
+   box-shadow:2px 2px 2px #999;
+}
+.max_text { margin-left:380px;}
+.amount { float:right; height: 50px; width: 120px;  }
+.amount > span { display: block; text-align: center; height: 20px; line-height: 30px; color:#01060c; font-size:12px;}
+.amount > i { font-size:20px; text-align: center;  color:#f62058; display:block; height: 40px; line-height: 40px;}
+.amount > i > small { font-size:14px;}
+.count_buy 
+{ 
+	display: none;
+	text-align: center; 
+	color:#fff !important; 
+	font-weight: bold;
+  background:#557ca5; font-size:15px;
+  border-radius:5px; position: relative; 
+  box-shadow:0 1px 1px rgba(0,0,0,0.3);
+	float:right;  
+	margin:-27px -10px 0 0; 
+	
+	height: 23px; 
+	line-height: 25px; 
+	width: 40px; color:#ccc;
+	   
+}
+#drag:hover .count_buy  {display: inline-block; }
+.normal_field {font-size: 14px !important; height: 30px !important; color:#000 !important;}

@@ -1,0 +1,1 @@
+(function($){$(function(){$('#brifly.main .name_page .sort ul').on('click','li:not(.active)',function(){$(this).addClass('active').siblings().removeClass('active').parents('div#brifly.main').find('div.tab_box').eq($(this).index()).fadeIn(500).siblings('div.tab_box').hide();})})})(jQuery)
