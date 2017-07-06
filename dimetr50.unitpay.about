@@ -30,6 +30,22 @@ qwe123
 Там вкладка настройки можешь посмотреть как другие оплаты настраиваются
 
 ---------------------
+DONE:
+Изменения:
+
+> изображение добавлено assets/img/pay/unitpay.png
+
+> config.json - добавлено
+после "PAYEER": "0":
+    "UNITPAY": "1"
+после "py_key": "Dsad690D6s90":
+    "unitpay_public_key": "Unitpay_public",
+    "unitpay_secret_key": "Unitpay_secret",
+
+> app/templates/admin/settings.php - html код для формы
+
+> app/system/order.php
+---------------------
 
 "SELECT * FROM `items` WHERE `sid` = '".intval(SID)."' ".("AND `main` = '1'")." ORDER BY item_id ASC"
     => SELECT * FROM `items` WHERE `sid` = '10031' AND `main` = '1' ORDER BY item_id ASC

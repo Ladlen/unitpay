@@ -180,6 +180,7 @@ margin-left: 367px;
 				$SQL = mysqli_query($this->connectMainBD, "SELECT * FROM `items` WHERE `sid` = '".intval(SID)."' AND `main` = '1' ORDER BY item_id ASC");
 			}
 		?>
+		<option value="1" data-id="1" data-min_order="1">Название итем</option>
 		<? if(mysqli_num_rows($SQL) > 0){ ?>
 		<? while($row = mysqli_fetch_array($SQL)){ ?>
 		<option value="<?=$row['item_id'];?>" data-id="<?=$row['item_id'];?>" data-min_order="<?=$row['min'];?>"><?=$row['item'];?></option>

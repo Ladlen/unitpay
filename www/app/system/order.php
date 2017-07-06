@@ -387,7 +387,9 @@
 							$SQL = mysqli_query($this->connectMainBD, "SELECT * FROM `items` WHERE `item_id` = '".intval($_POST['item'])."' AND `sid` = '".intval(SID)."'");
 							$row = mysqli_fetch_array($SQL);
 							# Товар существует
-							if(mysqli_num_rows($SQL) > 0){
+							//if(mysqli_num_rows($SQL) > 0){
+							if (1) {
+								$row = ['price'=>10.1, 'item_id'=>2,'WMR'=>10.1,'item'=>'Название итем','type'=>'str','count'=>2];
 								# Парсим цены
 								$price = json_decode($row['price'], true);
 								# Нужное количество товара существует
@@ -523,12 +525,24 @@
 												<input type="hidden" name="m_process" value="send" />
 											</form>
 											<script>
-												setTimeout(function(){
+												/*setTimeout(function(){
 													document.getElementById(\'formPay\').submit();
-												}, 1000);
+												}, 1000);*/
 											</script>
 										';
 									# Остальные системы оплат
+									} else if($_POST['wallet'] == "UNITPAY") {
+										$inv_id = OID;
+										$amount = number_format($orderPrice * $_POST['count'], 2, '.', '');
+										$description = 'Оплата заказа №' . $inv_id;
+										$query = http_build_query([
+											'sum' => $amount,
+											'account' => $inv_id,
+											'desc' => $description,
+											'signature' => sha256("$inv_id:$description:$amount:$SETTING[unitpay_private_key]"),
+										]);
+										$url = "https://unitpay.ru/pay/$SETTING[unitpay_public_key]?" . $query;
+										$formBill = '<script>location.href = ' . json_encode($url) . ';</script>';
 									} else {
 										if($SETTING['form'] == 1){
 											if($_POST['wallet'] == "YAD" || $_POST['wallet'] == "QIWI" || $_POST['wallet'] == "WMR" ||  $_POST['wallet'] == "WMU" ||  $_POST['wallet'] == "WMZ" ||  $_POST['wallet'] == "WME"){
