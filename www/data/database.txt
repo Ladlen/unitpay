@@ -1,0 +1,1245 @@
+
+
+backups
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => bid
+    [Field] => bid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => item_id
+    [Field] => item_id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => date
+    [Field] => date
+    [1] => timestamp
+    [Type] => timestamp
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => current_timestamp()
+    [Default] => current_timestamp()
+    [5] => 
+    [Extra] => 
+)
+
+
+block_ip
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => bid
+    [Field] => bid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => ip
+    [Field] => ip
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => date
+    [Field] => date
+    [1] => timestamp
+    [Type] => timestamp
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => current_timestamp()
+    [Default] => current_timestamp()
+    [5] => 
+    [Extra] => 
+)
+
+
+categories
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => cid
+    [Field] => cid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => category
+    [Field] => category
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => name
+    [Field] => name
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => main
+    [Field] => main
+    [1] => tinyint(1)
+    [Type] => tinyint(1)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 0
+    [Default] => 0
+    [5] => 
+    [Extra] => 
+)
+
+
+codes
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => cid
+    [Field] => cid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => type
+    [Field] => type
+    [1] => varchar(255)
+    [Type] => varchar(255)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => single
+    [Default] => single
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => code
+    [Field] => code
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => count
+    [Field] => count
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => YES
+    [Null] => YES
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => item
+    [Field] => item
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => discount
+    [Field] => discount
+    [1] => float
+    [Type] => float
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+
+
+gifts
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => gid
+    [Field] => gid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => gift
+    [Field] => gift
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => winner
+    [Field] => winner
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => users
+    [Field] => users
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => image
+    [Field] => image
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => desc
+    [Field] => desc
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => vk
+    [Field] => vk
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => time
+    [Field] => time
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+
+
+items
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => cid
+    [Field] => cid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => YES
+    [Null] => YES
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => item_id
+    [Field] => item_id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => item
+    [Field] => item
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => image
+    [Field] => image
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => price
+    [Field] => price
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => count
+    [Field] => count
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => YES
+    [Null] => YES
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => body
+    [Field] => body
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => main
+    [Field] => main
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => type
+    [Field] => type
+    [1] => varchar(4)
+    [Type] => varchar(4)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => text
+    [Default] => text
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => min
+    [Field] => min
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 1
+    [Default] => 1
+    [5] => 
+    [Extra] => 
+)
+
+
+logs
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => lid
+    [Field] => lid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => ip
+    [Field] => ip
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => login
+    [Field] => login
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => status
+    [Field] => status
+    [1] => tinyint(1)
+    [Type] => tinyint(1)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => date
+    [Field] => date
+    [1] => timestamp
+    [Type] => timestamp
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => current_timestamp()
+    [Default] => current_timestamp()
+    [5] => 
+    [Extra] => 
+)
+
+
+orders
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => oid
+    [Field] => oid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => item
+    [Field] => item
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => item_id
+    [Field] => item_id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => email
+    [Field] => email
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => wallet
+    [Field] => wallet
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => bill
+    [Field] => bill
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => price
+    [Field] => price
+    [1] => float
+    [Type] => float
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => count
+    [Field] => count
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => status
+    [Field] => status
+    [1] => tinyint(1)
+    [Type] => tinyint(1)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 0
+    [Default] => 0
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => time
+    [Field] => time
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => ip
+    [Field] => ip
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+
+
+pages
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => pid
+    [Field] => pid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => title
+    [Field] => title
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => body
+    [Field] => body
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+
+
+users
+
+ ----------------------------------- 
+
+Array
+(
+    [0] => id
+    [Field] => id
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => PRI
+    [Key] => PRI
+    [4] => 
+    [Default] => 
+    [5] => auto_increment
+    [Extra] => auto_increment
+)
+Array
+(
+    [0] => uid
+    [Field] => uid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => sid
+    [Field] => sid
+    [1] => int(11)
+    [Type] => int(11)
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => login
+    [Field] => login
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => ulogin
+    [Field] => ulogin
+    [1] => text
+    [Type] => text
+    [2] => YES
+    [Null] => YES
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => email
+    [Field] => email
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => password
+    [Field] => password
+    [1] => text
+    [Type] => text
+    [2] => NO
+    [Null] => NO
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)
+Array
+(
+    [0] => privilege
+    [Field] => privilege
+    [1] => text
+    [Type] => text
+    [2] => YES
+    [Null] => YES
+    [3] => 
+    [Key] => 
+    [4] => 
+    [Default] => 
+    [5] => 
+    [Extra] => 
+)

@@ -32,6 +32,8 @@
 				# Переменная баз данных
 				$this->connectMainBD = $connectMainBD;
 				$this->connect = $connect;
+				$this->connectMainBD = mysqli_connect('localhost', 'root', 'temp123', 'unitpay');
+				$this->connect = mysqli_connect('localhost', 'root', 'temp123', 'unitpay');
 			}
 		}
 		# Случайный текст
