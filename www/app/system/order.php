@@ -539,7 +539,7 @@
 											'sum' => $amount,
 											'account' => $inv_id,
 											'desc' => $description,
-											'signature' => sha256("$inv_id:$description:$amount:$SETTING[unitpay_private_key]"),
+											'signature' => hash('sha256', "$inv_id:$description:$amount:$SETTING[unitpay_private_key]"),
 										]);
 										$url = "https://unitpay.ru/pay/$SETTING[unitpay_public_key]?" . $query;
 										$formBill = '<script>location.href = ' . json_encode($url) . ';</script>';
