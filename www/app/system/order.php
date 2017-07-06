@@ -387,9 +387,7 @@
 							$SQL = mysqli_query($this->connectMainBD, "SELECT * FROM `items` WHERE `item_id` = '".intval($_POST['item'])."' AND `sid` = '".intval(SID)."'");
 							$row = mysqli_fetch_array($SQL);
 							# Товар существует
-							//if(mysqli_num_rows($SQL) > 0){
-							if (1) {
-								$row = ['price'=>10.1, 'item_id'=>2,'WMR'=>10.1,'item'=>'Название итем','type'=>'str','count'=>2];
+							if(mysqli_num_rows($SQL) > 0){
 								# Парсим цены
 								$price = json_decode($row['price'], true);
 								# Нужное количество товара существует

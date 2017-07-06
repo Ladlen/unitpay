@@ -29,6 +29,15 @@ test@mail.ru
 qwe123
 Там вкладка настройки можешь посмотреть как другие оплаты настраиваются
 
+--
+
+Касса висит на модерации..
+93121-798d9
+PUBLIC KEY
+
+d659beee8847b09f876e0f1c5e44f4d1
+SECRET KEY
+
 ---------------------
 DONE:
 Изменения:
@@ -47,6 +56,9 @@ DONE:
 > app/system/order.php
 
 > app/unitpay.php
+
+> app/system/admin.php
+    if($wallet == "UNITPAY")
 
 TODO: app/system/order.php - ищи к примеру по PRIMEAREA - там несколько случаев обрабатывается, например, статус платежа
 ---------------------

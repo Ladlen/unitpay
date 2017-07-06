@@ -128,7 +128,9 @@
 																	} else if($wallet == "QIWI"){
 																		$price[$wallet] = number_format($_POST['price']['WMR'], 2, '.', '');
 																	# Payeer
-																	} else if($wallet == "PAYEER"){
+																	} else if($wallet == "PAYEER") {
+																		$price[$wallet] = number_format($_POST['price']['WMR'], 2, '.', '');
+																	} else if($wallet == "UNITPAY") {
 																		$price[$wallet] = number_format($_POST['price']['WMR'], 2, '.', '');
 																	# Вебмани
 																	} else {
@@ -234,7 +236,9 @@
 																} else if($wallet == "FREEKASSA"){
 																	$price[$wallet] = ($_POST['price']['WMR'] > 0 ? number_format($_POST['price']['WMR'], 2, '.', '') : 0);
 																# Киви
-																} else if($wallet == "QIWI"){
+																} else if($wallet == "QIWI") {
+																	$price[$wallet] = ($_POST['price']['WMR'] > 0 ? number_format($_POST['price']['WMR'], 2, '.', '') : 0);
+																} else if($wallet == "UNITPAY") {
 																	$price[$wallet] = ($_POST['price']['WMR'] > 0 ? number_format($_POST['price']['WMR'], 2, '.', '') : 0);
 																# Вебмани
 																} else {
