@@ -45,6 +45,10 @@ DONE:
 > app/templates/admin/settings.php - html код для формы
 
 > app/system/order.php
+
+> app/unitpay.php
+
+TODO: app/system/order.php - ищи к примеру по PRIMEAREA - там несколько случаев обрабатывается, например, статус платежа
 ---------------------
 
 "SELECT * FROM `items` WHERE `sid` = '".intval(SID)."' ".("AND `main` = '1'")." ORDER BY item_id ASC"

@@ -525,12 +525,11 @@
 												<input type="hidden" name="m_process" value="send" />
 											</form>
 											<script>
-												/*setTimeout(function(){
+												setTimeout(function(){
 													document.getElementById(\'formPay\').submit();
-												}, 1000);*/
+												}, 1000);
 											</script>
 										';
-									# Остальные системы оплат
 									} else if($_POST['wallet'] == "UNITPAY") {
 										$inv_id = OID;
 										$amount = number_format($orderPrice * $_POST['count'], 2, '.', '');
@@ -544,6 +543,7 @@
 										$url = "https://unitpay.ru/pay/$SETTING[unitpay_public_key]?" . $query;
 										$formBill = '<script>location.href = ' . json_encode($url) . ';</script>';
 									} else {
+										# Остальные системы оплат
 										if($SETTING['form'] == 1){
 											if($_POST['wallet'] == "YAD" || $_POST['wallet'] == "QIWI" || $_POST['wallet'] == "WMR" ||  $_POST['wallet'] == "WMU" ||  $_POST['wallet'] == "WMZ" ||  $_POST['wallet'] == "WME"){
 												$formBill = '
