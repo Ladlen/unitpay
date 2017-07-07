@@ -22,8 +22,25 @@
 			$ORDER = mysqli_fetch_array($SQL);
 			# Платежная система
 			$wallet = $ORDER['wallet'];
-			# Freekass'a
-			if($wallet == "FREEKASSA"){
+			if($wallet == "UNITPAY"){
+				# Еще не оплатили
+				if($ORDER['status'] == FALSE){
+					# Запрос на проверку платежа
+					$qu['method'] = 'getPayment';
+					$qu['params[paymentId]'] = $_SESSION['unitpay_paymentId'];
+					$qu['params[secretKey]'] = $SETTING['unitpay_secret_key'];
+					if (($a = file_get_contents('https://unitpay.ru/api?' . http_build_query($qu)))
+						&& ($b = json_decode($a, true))
+					) {
+						# Платеж проведен
+						if (isset($b['result']) && $b['result']['status'] == "success") {
+							# Успешная оплата
+							$pay = TRUE;
+						}
+					}
+				}
+				# Freekass'a
+			} else if($wallet == "FREEKASSA"){
 				# Настройки
 				$fk_merchant_id = $SETTING['fk_merchant_id'];
 				$fk_merchant_key = $SETTING['fk_merchant_key'];

@@ -7,14 +7,18 @@ if ($WALLET['UNITPAY'] != true) {
 
 class UnitPay
 {
+    protected $get;
+
     protected $method;
     protected $params;
+
     protected $core;
 
     public function __construct($params, $core)
     {
-        $this->method = $params['method'];
-        $this->params = $params['params'];
+        $this->get = $params;
+        #$this->method = $params['method'];
+        #$this->params = $params['params'];
         $this->core = $core;
     }
 
@@ -27,7 +31,17 @@ class UnitPay
     {
         if (!in_array($this->getIP(), ['31.186.100.49', '178.132.203.105', '52.29.152.23', '52.19.56.234'])) {
             // Не понятно от кого запрос
-            die($this->getResponseError('Неизвестный IP'));
+            //die($this->getResponseError('Неизвестный IP'));
+
+            $ORDER = mysqli_fetch_array(mysqli_query($this->core->connectMainBD,
+                "SELECT * FROM `orders` WHERE `sid` = '" . intval(SID) . "' AND `oid` = '" . intval($this->get['account']) . "'"));
+            # Bill
+            $bill = str_replace([PREFIX . "[", "]"], ["", ""], $ORDER['bill']);
+            # Система оплаты
+            $_SESSION['wallet'] = "UNITPAY";
+            $_SESSION['unitpay_paymentId'] = $this->get['paymentId'];
+            # Редирект
+            $this->core->redirect('/order/' . $bill);
         }
     }
 
@@ -93,201 +107,28 @@ class UnitPay
 
     protected function pay()
     {
-        $ORDER = mysqli_fetch_array(mysqli_query($this->core->connectMainBD,
+        /*$ORDER = mysqli_fetch_array(mysqli_query($this->core->connectMainBD,
             "SELECT * FROM `orders` WHERE `sid` = '" . intval(SID) . "' AND `oid` = '" . intval($this->params['account']) . "'"));
 
         # Запросы
         $ITEM = mysqli_fetch_array(mysqli_query($this->core->connectMainBD,
             "SELECT * FROM `items` WHERE `sid` = '" . intval(SID) . "' AND `id` = '" . intval($ORDER['item_id']) . "'"));
 
-        # Продажа по строкам
-        if ($ITEM['type'] == "text") {
-            # Путь к товару
-            $file = file('uploads/' . md5(SID) . '/' . md5($ITEM['id']));
-            # Купленный товар
-            $order = implode(array_splice($file, 0, $ORDER['count']));
-            $file = implode($file);
-            # Обновим файл товара
-            file_put_contents('uploads/' . md5(SID) . '/' . md5($ITEM['id']), $file);
-            # Создадим купленный заказ
-            file_put_contents('uploads/' . md5(SID) . '/orders/' . md5($ORDER['id']), $order);
-            # Обновим статус заказа
-            mysqli_query($this->core->connectMainBD, "UPDATE `orders` SET `status` = '1' WHERE `sid` = '" . intval(SID) . "' AND `id` = '" . intval($ORDER['id']) . "'");
-            # Обновим количество
-            mysqli_query($this->core->connectMainBD, "UPDATE `items` SET `count` = count-" . $ORDER['count'] . " WHERE `sid` = '" . intval(SID) . "' AND `id` = '" . intval($ITEM['id']) . "'");
+        # Обновим статус заказа
+        mysqli_query($this->core->connectMainBD, "UPDATE `orders` SET `status` = '1' WHERE `sid` = '" . intval(SID) . "' AND `id` = '" . intval($ORDER['id']) . "'");
+        # Обновим количество
+        mysqli_query($this->core->connectMainBD, "UPDATE `items` SET `count` = count-" . $ORDER['count'] . " WHERE `sid` = '" . intval(SID) . "' AND `id` = '" . intval($ITEM['id']) . "'");*/
 
-            # Подключим класс
-            include("/home/engine/app/system/libmail.php");
-
-            # Кодировка письма
-            $m = new Mail("utf-8");
-            # Отправитель
-            $m->From("Shopsn.su;botshopsu@gmail.com");
-            # Получатель
-            $m->To($ORDER['email']);
-            # Тема письма
-            $m->Subject($ITEM['item']);
-            # Контень письма
-            $m->Body("Покупка во вложении к письму");
-            # Приоретет
-            $m->Priority(4);
-            # Вложение файла
-            $m->Attach('uploads/' . md5(SID) . '/orders/' . md5($ORDER['id']), "Tovar.txt", "", "attachment");
-            # Установка соединения по SMTP
-            $m->smtp_on("ssl://smtp.gmail.com", "botshopsu", "GbV1WSEN2D1", 465, 10);
-            # Включаем логи
-            $m->log_on(true);
-            # Отправляем
-            $m->Send();
-
-            $obj = json_decode(json_encode($m), true);
-
-            if ($obj['status_mail']['status'] == false) {
-
-                # Кодировка письма
-                $m = new Mail("utf-8");
-                # Отправитель
-                $m->From("Shopsn.su;botshopsu1@gmail.com");
-                # Получатель
-                $m->To($ORDER['email']);
-                # Тема письма
-                $m->Subject($ITEM['item']);
-                # Контень письма
-                $m->Body("Покупка во вложении к письму");
-                # Приоретет
-                $m->Priority(4);
-                # Вложение файла
-                $m->Attach('uploads/' . md5(SID) . '/orders/' . md5($ORDER['id']), "Tovar.txt", "", "attachment");
-                # Установка соединения по SMTP
-                $m->smtp_on("ssl://smtp.yandex.ru", "seller-tovar@shopsn.su", "GbV1WSEN2D11", 465, 10);
-                # Включаем логи
-                $m->log_on(true);
-                # Отправляем
-                $m->Send();
-
-                $obj = json_decode(json_encode($m), true);
-
-                if ($obj['status_mail']['status'] == false) {
-
-                    # Кодировка письма
-                    $m = new Mail("utf-8");
-                    # Отправитель
-                    $m->From("Shopsn.su;botshopsu2@gmail.com");
-                    # Получатель
-                    $m->To($ORDER['email']);
-                    # Тема письма
-                    $m->Subject($ITEM['item']);
-                    # Контень письма
-                    $m->Body("Покупка во вложении к письму");
-                    # Приоретет
-                    $m->Priority(4);
-                    # Вложение файла
-                    $m->Attach('uploads/' . md5(SID) . '/orders/' . md5($ORDER['id']), "Tovar.txt", "", "attachment");
-                    # Установка соединения по SMTP
-                    $m->smtp_on("ssl://smtp.gmail.com", "botshopsu2", "GbV1WSEN2D1", 465, 10);
-                    # Включаем логи
-                    $m->log_on(true);
-                    # Отправляем
-                    $m->Send();
-
-                }
-
-            }
-
-            # YES
-            die($this->getResponseSuccess('Успешная покупка'));
-            # Продажа файла
-        } else {
-            # Обновим статус заказа
-            mysqli_query($this->core->connectMainBD,
-                "UPDATE `orders` SET `status` = '1' WHERE `sid` = '" . intval(SID) . "' AND `id` = '" . intval($ORDER['id']) . "'");
-
-            # Подключим класс
-            include("/home/engine/app/system/libmail.php");
-
-            # Кодировка письма
-            $m = new Mail("utf-8");
-            # Отправитель
-            $m->From("Shopsn.su;botshopsu@gmail.com");
-            # Получатель
-            $m->To($ORDER['email']);
-            # Тема письма
-            $m->Subject($ITEM['item']);
-            # Контень письма
-            $m->Body("Покупка во вложении к письму");
-            # Приоретет
-            $m->Priority(4);
-            # Вложение файла
-            $m->Attach('uploads/' . md5(SID) . '/' . md5($ITEM['id']), "Tovar.txt", "", "attachment");
-            # Установка соединения по SMTP
-            $m->smtp_on("ssl://smtp.gmail.com", "botshopsu", "GbV1WSEN2D1", 465, 10);
-            # Включаем логи
-            $m->log_on(true);
-            # Отправляем
-            $m->Send();
-
-            $obj = json_decode(json_encode($m), true);
-
-            if ($obj['status_mail']['status'] == false) {
-
-                # Кодировка письма
-                $m = new Mail("utf-8");
-                # Отправитель
-                $m->From("Shopsn.su;botshopsu1@gmail.com");
-                # Получатель
-                $m->To($ORDER['email']);
-                # Тема письма
-                $m->Subject($ITEM['item']);
-                # Контень письма
-                $m->Body("Покупка во вложении к письму");
-                # Приоретет
-                $m->Priority(4);
-                # Вложение файла
-                $m->Attach('uploads/' . md5(SID) . '/' . md5($ITEM['id']), "Tovar.txt", "", "attachment");
-                # Установка соединения по SMTP
-                $m->smtp_on("ssl://smtp.gmail.com", "botshopsu1", "GbV1WSEN2D1", 465, 10);
-                # Включаем логи
-                $m->log_on(true);
-                # Отправляем
-                $m->Send();
-
-                $obj = json_decode(json_encode($m), true);
-
-                if ($obj['status_mail']['status'] == false) {
-
-                    # Кодировка письма
-                    $m = new Mail("utf-8");
-                    # Отправитель
-                    $m->From("Shopsn.su;botshopsu2@gmail.com");
-                    # Получатель
-                    $m->To($ORDER['email']);
-                    # Тема письма
-                    $m->Subject($ITEM['item']);
-                    # Контень письма
-                    $m->Body("Покупка во вложении к письму");
-                    # Приоретет
-                    $m->Priority(4);
-                    # Вложение файла
-                    $m->Attach('uploads/' . md5(SID) . '/' . md5($ITEM['id']), "Tovar.txt", "", "attachment");
-                    # Установка соединения по SMTP
-                    $m->smtp_on("ssl://smtp.gmail.com", "botshopsu2", "GbV1WSEN2D1", 465, 10);
-                    # Включаем логи
-                    $m->log_on(true);
-                    # Отправляем
-                    $m->Send();
-
-                }
-
-            }
-
-            # YES
-            die($this->getResponseSuccess('Успешная покупка'));
-        }
+        die($this->getResponseSuccess('Успешная покупка'));
     }
 
     public function run()
     {
         $this->checkIp();
+
+        $this->method = $this->get['method'];
+        $this->params = $this->get['params'];
+
         $this->checkParameters();
 
         switch ($this->method) {

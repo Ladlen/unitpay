@@ -51,7 +51,7 @@ $params['orderCurrency'] = 'RUB';   // Валюта заказа
 // Изменяются
 $method = 'pay';
 $params['orderSum'] = '2';  // Сумма заказа
-$params['account'] = 40;
+$params['account'] = 2;
 
 // Вычисляется
 /*ksort($params);
