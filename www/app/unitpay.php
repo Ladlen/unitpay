@@ -25,7 +25,7 @@ class UnitPay
 
     protected function checkIp()
     {
-        if (!in_array(getIP(), ['31.186.100.49', '178.132.203.105', '52.29.152.23', '52.19.56.234'])) {
+        if (!in_array($this->getIP(), ['31.186.100.49', '178.132.203.105', '52.29.152.23', '52.19.56.234'])) {
             // Не понятно от кого запрос
             die($this->getResponseError('Неизвестный IP'));
         }
@@ -53,7 +53,7 @@ class UnitPay
             die($this->getResponseError('Валюта платежа - рубли, а не ' . $this->params['orderCurrency']));
         }
 
-        if ($this->getSignature($this->params) != $this->params['signature']) {
+        if ($this->getSignature($this->params, $this->method) != $this->params['signature']) {
             die($this->getResponseError('Не правильная сигнатура!'));
         }
     }
@@ -78,10 +78,12 @@ class UnitPay
 
     protected function getSignature(array $params, $method = null)
     {
+        $SETTING = json_decode(SETTINGS, true);
+
         ksort($params);
         unset($params['sign']);
         unset($params['signature']);
-        array_push($params, $this->secretKey);  //d659beee8847b09f876e0f1c5e44f4d1
+        array_push($params, $SETTING['unitpay_secret_key']);  //d659beee8847b09f876e0f1c5e44f4d1
         if ($method) {
             array_unshift($params, $method);
         }
@@ -301,7 +303,7 @@ class UnitPay
                 break;
             }*/
             default: {
-                die($this->getResponseError($this->method . ' не поддерживается'));
+                die($this->getResponseError('Метод ' . $this->method . ' не поддерживается'));
                 break;
             }
         }

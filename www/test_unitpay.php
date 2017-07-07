@@ -5,7 +5,20 @@ ini_set('display_errors', 1);
 
 define('SECRET_KEY', 'd659beee8847b09f876e0f1c5e44f4d1');
 
-$url = 'http://unitpay.local/unitpay?';
+function getSignature(array $params, $method = null)
+{
+    ksort($params);
+    unset($params['sign']);
+    unset($params['signature']);
+    array_push($params, SECRET_KEY);
+    if ($method) {
+        array_unshift($params, $method);
+    }
+
+    return hash('sha256', join('{up}', $params));
+}
+
+$url = 'http://unitpay.local/unitpay/?';
 //$url .= 'method=check&';
 //$url .= 'params[account]=userId';
 //$url .= 'params[date]=2017-07-01 12:32:00';
@@ -36,22 +49,23 @@ $params['test'] = 0;    // Признак тестового режима
 $params['orderCurrency'] = 'RUB';   // Валюта заказа
 
 // Изменяются
-$method = 'check';
-$params['orderSum'] = '10.00';  // Сумма заказа
-$params['account'] = 3;
+$method = 'pay';
+$params['orderSum'] = '2';  // Сумма заказа
+$params['account'] = 40;
 
 // Вычисляется
-ksort($params);
+/*ksort($params);
 unset($params['sign']);
 unset($params['signature']);
 array_push($params, SECRET_KEY);
 if ($method) {
     array_unshift($params, $method);
 }
-$params['signature'] = hash('sha256', join('{up}', $params));
+$params['signature'] = hash('sha256', join('{up}', $params));*/
 
-//$url .= http_build_query(['method' => $method, 'params' => $params]);
+$params['signature'] = getSignature($params, $method);
 
-$url = 'http://unitpay.local/unitpay';
-$url = 'http://google.com';
+$url .= http_build_query(['method' => $method, 'params' => $params]);
+
+die(htmlspecialchars($url));
 echo file_get_contents($url);
