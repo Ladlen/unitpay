@@ -9,7 +9,8 @@
     "ROBOKASSA": "1",
     "FREEKASSA": "0",
     "PRIMEAREA": "1",
-    "PAYEER": "0"
+    "PAYEER": "1",
+    "UNITPAY": "1"
   },
   "title": "DropKey",
   "sid": 10031,
@@ -35,6 +36,8 @@
     "pa_secret": "a3acee08b2859cd91a5589d07f0713ed",
     "py_shop": "372674543",
     "py_key": "Dsad690D6s90",
+    "unitpay_public_key": "93121-798d9",
+    "unitpay_secret_key": "d659beee8847b09f876e0f1c5e44f4d1",
     "form": "0",
     "prefix": "bill",
     "keywords": "\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430 \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430 \u0432 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0435",
