@@ -42,7 +42,7 @@ SECRET KEY
 DONE:
 Изменения:
 
-> изображение добавлено assets/img/pay/unitpay.png
+> изображение добавлено assets/img/pay/unitpay.png +
 
 > config.json - добавлено
 после "PAYEER": "0":
@@ -51,13 +51,13 @@ DONE:
     "unitpay_public_key": "Unitpay_public",
     "unitpay_secret_key": "Unitpay_secret",
 
-> app/templates/admin/settings.php - html код для формы
+> app/templates/admin/settings.php - html код для формы +
 
-> app/system/order.php
+> app/system/order.php +
 
 > app/unitpay.php
 
-> app/system/admin.php
+> app/system/admin.php +
     if($wallet == "UNITPAY")
 
 > app/core.php - получить доступ

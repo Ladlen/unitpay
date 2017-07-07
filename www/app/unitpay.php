@@ -81,7 +81,7 @@ class UnitPay
         ksort($params);
         unset($params['sign']);
         unset($params['signature']);
-        array_push($params, $this->secretKey);
+        array_push($params, $this->secretKey);  //d659beee8847b09f876e0f1c5e44f4d1
         if ($method) {
             array_unshift($params, $method);
         }
