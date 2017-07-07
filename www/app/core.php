@@ -71,6 +71,7 @@
 					case "robokassa": $this->page('robokassa'); break;
 					# PrimeArea
 					case "primearea": $this->page('primearea'); break;
+					case "unitpay": $this->page('unitpay'); break;
 					# Яндекс
 					case "yandex": $this->page('yandex', $split); break;
 					# Мерчанты
@@ -405,9 +406,11 @@
 				# Подключим PrimeArea
 				include('primearea.php');
 			# Payeer
-			} else if($name == "payeer"){
+			} else if($name == "payeer") {
 				# Подключим PrimeArea
 				include('payeer.php');
+			} else if($name == "unitpay") {
+				include('unitpay.php');
 			# Яндекс
 			} else if($name == "yandex"){
 				# Подключим Яндекс

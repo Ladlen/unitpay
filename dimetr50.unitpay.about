@@ -60,6 +60,9 @@ DONE:
 > app/system/admin.php
     if($wallet == "UNITPAY")
 
+> app/core.php - получить доступ
+    добавлена маршрутизация к unitpay (см. по ключевому слову)
+    
 TODO: app/system/order.php - ищи к примеру по PRIMEAREA - там несколько случаев обрабатывается, например, статус платежа
 ---------------------
 
