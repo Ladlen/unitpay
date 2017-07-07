@@ -23,6 +23,7 @@
 			# Платежная система
 			$wallet = $ORDER['wallet'];
 			if($wallet == "UNITPAY"){
+				#$pay = TRUE;
 				# Еще не оплатили
 				if($ORDER['status'] == FALSE){
 					# Запрос на проверку платежа
@@ -359,7 +360,7 @@
 							# Обновим количество
 							mysqli_query($this->connectMainBD, "UPDATE `items` SET `count` = count-".$ORDER['count']." WHERE `sid` = '".intval(SID)."' AND `id` = '".intval($ITEM['id'])."'");
 							# Фрикасса, Робокасса, Primearea, Payeer
-							if($ORDER['wallet'] == "FREEKASSA" || $ORDER['wallet'] == "ROBOKASSA" || $ORDER['wallet'] == "PRIMEAREA" || $ORDER['wallet'] == "PAYEER"){
+							if($ORDER['wallet'] == "FREEKASSA" || $ORDER['wallet'] == "ROBOKASSA" || $ORDER['wallet'] == "PRIMEAREA" || $ORDER['wallet'] == "PAYEER" || $ORDER['wallet'] == "UNITPAY"){
 								Header("Location: http://".$_SERVER['HTTP_HOST']."/order/".ORDER);
 							} else {
 								# Ответ
