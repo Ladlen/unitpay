@@ -436,7 +436,12 @@
 										} else $orderPrice = $price[$_POST['wallet']];
 									# Стоимость без промо-кода
 									} else $orderPrice = $price[$_POST['wallet']];
-									
+
+									if (!$orderPrice) {
+										// Костыль для новых платежных систем
+										$orderPrice = $price['WMR'];
+									}
+
 									# Примечание перевода
 									$bill = $this->bill(10);
 									# Добавим заказ в базу данных
