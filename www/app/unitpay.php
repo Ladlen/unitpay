@@ -35,13 +35,18 @@ class UnitPay
 
             $ORDER = mysqli_fetch_array(mysqli_query($this->core->connectMainBD,
                 "SELECT * FROM `orders` WHERE `sid` = '" . intval(SID) . "' AND `oid` = '" . intval($this->get['account']) . "'"));
-            # Bill
-            $bill = str_replace([PREFIX . "[", "]"], ["", ""], $ORDER['bill']);
-            # Система оплаты
-            $_SESSION['wallet'] = "UNITPAY";
-            $_SESSION['unitpay_paymentId'] = $this->get['paymentId'];
-            # Редирект
-            $this->core->redirect('/order/' . $bill);
+
+            if ($ORDER) {
+                # Bill
+                $bill = str_replace([PREFIX . "[", "]"], ["", ""], $ORDER['bill']);
+                # Система оплаты
+                $_SESSION['wallet'] = "UNITPAY";
+                $_SESSION['unitpay_paymentId'] = $this->get['paymentId'];
+                # Редирект
+                $this->core->redirect('/order/' . $bill);
+            } else {
+                die($this->getResponseError('Заказ не найден'));
+            }
         }
     }
 
