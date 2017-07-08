@@ -44,7 +44,7 @@ DONE:
 
 > изображение добавлено assets/img/pay/unitpay.png +
 
-> config.json - добавлено
+> config.json - добавлено +
 после "PAYEER": "0":
     "UNITPAY": "1"
 после "py_key": "Dsad690D6s90":
@@ -55,15 +55,15 @@ DONE:
 
 > app/system/order.php +
 
-> app/unitpay.php
+> app/unitpay.php +
 
 > app/system/admin.php +
     if($wallet == "UNITPAY")
 
-> app/core.php - получить доступ
+> app/core.php - получить доступ +
     добавлена маршрутизация к unitpay (см. по ключевому слову)
     
-TODO: app/system/order.php - ищи к примеру по PRIMEAREA - там несколько случаев обрабатывается, например, статус платежа
+TODO: app/system/order.php - ищи к примеру по PRIMEAREA - там несколько случаев обрабатывается, например, статус платежа +
 ---------------------
 
 "SELECT * FROM `items` WHERE `sid` = '".intval(SID)."' ".("AND `main` = '1'")." ORDER BY item_id ASC"
